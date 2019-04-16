@@ -11,6 +11,11 @@ function Ticket(props){
             <h3>{props.location} - {props.names}</h3>
             <p><em>{props.issue}</em></p>
             <hr/>
+            <style jsx>{`
+                h3 {
+                    color: darkBlue;
+                }
+            `}</style>
         </div>
     );
 }
