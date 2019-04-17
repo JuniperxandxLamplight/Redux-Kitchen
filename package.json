@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
     "lint": "eslint src/** src/**/**; exit 0",
-    "lint-fix": "eslint src/** src/**/** --fix; exit 0"
+    "fix": "eslint src/** src/**/** --fix; exit 0"
   },
   "author": "Kimberly McConnell",
   "license": "ISC",
@@ -15,6 +15,7 @@
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-router-dom": "^4.0.0",
     "styled-jsx": "^3.2.1"
   },
   "devDependencies": {
@@ -25,8 +26,10 @@
     "eslint": "^4.13.1",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-react": "^7.12.4",
+    "file-loader": "^1.1.6",
     "html-webpack-plugin": "^2.29.0",
     "react-hot-loader": "^3.0.0-beta.7",
+    "url-loader": "^0.6.2",
     "webpack": "^3.4.0",
     "webpack-dev-server": "^2.5.0"
   }
