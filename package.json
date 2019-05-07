@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watchAll",
     "start": "webpack-dev-server",
     "lint": "eslint src/** src/**/**; exit 0",
     "fix": "eslint src/** src/**/** --fix; exit 0"
@@ -12,6 +12,7 @@
   "author": "Kimberly McConnell",
   "license": "ISC",
   "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
     "moment": "^2.18.1",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
@@ -19,6 +20,7 @@
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.0.0",
     "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "styled-jsx": "^3.2.1",
     "uuid": "^3.2.1"
   },
