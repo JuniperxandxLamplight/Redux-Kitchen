@@ -11,25 +11,25 @@ module.exports = {
       'webpack/hot/only-dev-server',
       resolve(__dirname, "src", "index.jsx")
     ],
-  
+
     output: {
       filename: 'app.bundle.js',
       path: resolve(__dirname, 'build'),
       publicPath: '/'
     },
-  
+
     resolve: {
       extensions: ['.js', '.jsx']
     },
-  
+
     devtool: '#source-map',
-  
+
     devServer: {
       hot: true,
       contentBase: resolve(__dirname, 'build'),
       publicPath: '/'
     },
-  
+
     module: {
       rules: [
         {
@@ -77,7 +77,7 @@ module.exports = {
         new HtmlWebpackPlugin({
           template:'template.ejs',
           appMountId: 'react-app-root',
-          title: 'React Help Queue',
+          title: 'Redux Kitchen',
           filename: resolve(__dirname, "build", "index.html"),
         }),
       ]
