@@ -8,6 +8,7 @@ function StateContainer() {
       <style jsx>{`
         .main {
           background-color: #C7AA71;
+          //this width can go away when the grid happens
           width: 280px;
         }
       `}</style>
