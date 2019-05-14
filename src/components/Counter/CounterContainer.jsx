@@ -5,10 +5,10 @@ import ReducersForm from './ReducersForm';
 function CounterContainer() {
   return (
     <div>I'm the counter!
+      <ActionsForm/>
+      <ReducersForm/>
     </div>
   )
 }
 
-// <ActionsForm/>
-// <ReducersForm/>
 export default CounterContainer;

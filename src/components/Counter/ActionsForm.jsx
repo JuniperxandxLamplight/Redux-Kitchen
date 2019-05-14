@@ -12,7 +12,7 @@ function ActionsForm(){
       </div>
       <form>
         <p>action = {"{"}</p>
-        <p>
+        <p>&nbsp;&nbsp;
           type :
           <input placeholder="action type"></input>
         </p>
@@ -25,6 +25,9 @@ function ActionsForm(){
         };
         input{
           display: inline;
+          margin: 0 3px;
+          padding: 2px 5px;
+          border: none;
         };
         .numbersBox{
           text-align: center;

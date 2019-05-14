@@ -17,22 +17,22 @@ function ReducersForm(){
       </div>
       <form>
         <p>{"function waffleBot(state = initialState, action){"}</p>
-        <p>&nbsp;{"switch(action.type{"}</p>
-        <p>&nbsp;&nbsp;{"case 'COOK_WAFFLE':"}</p>
-        <p>&nbsp;&nbsp;&nbsp;{"return {cookedWaffles: cookedWaffles + 1}"}</p>
+        <p>&nbsp;&nbsp;{"switch(action.type{"}</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;{"case 'COOK_WAFFLE':"}</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"return {cookedWaffles: cookedWaffles + 1}"}</p>
         <p>
-          &nbsp;&nbsp;{"case "}
+          &nbsp;&nbsp;&nbsp;&nbsp;{"case "}
           <input placeholder="action type"></input>
           {":"}
         </p>
         <p>
-          &nbsp;&nbsp;&nbsp;{"return {"}
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"return {"}
           <input placeholder="state slice"></input>
           {":"}
           <input placeholder="state slice"></input>
           {" + 1}"}
         </p>
-        <p>&nbsp;{"}"}</p>
+        <p>&nbsp;&nbsp;{"}"}</p>
         <p>{"}"}</p>
         <button type="submit">Dispatch</button>
       </form>
@@ -42,6 +42,9 @@ function ReducersForm(){
         };
         input{
           display: inline;
+          margin: 0 3px;
+          padding: 2px 5px;
+          border: none;
         };
         .numbersBox{
           text-align: center;
