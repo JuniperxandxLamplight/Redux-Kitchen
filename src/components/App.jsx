@@ -20,7 +20,7 @@ function App() {
         }
         `}</style>
       <Header/>
-        <StateContainer />
+      <StateContainer />
       <Switch>
         <Route exact path='/' component={Welcome} />
         <Route path='/game' component={MainGame} />

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import StateDisplay from './StateDisplay';
 
@@ -8,7 +9,7 @@ function StateContainer(props) {
   return(
     <div className='main'>
       <StateDisplay kitchen={kitchen}
-                    pantry={pantry} />
+        pantry={pantry} />
       <style jsx>{`
         .main {
           background-color: #C7AA71;
@@ -17,13 +18,17 @@ function StateContainer(props) {
         }
       `}</style>
     </div>
-  )
+  );
 }
 
 const mapStateToProps = state => {
   return {
     state: state,
-  }
-}
+  };
+};
+
+StateContainer.propTypes = {
+  state: PropTypes.object,
+};
 
 export default connect(mapStateToProps)(StateContainer);

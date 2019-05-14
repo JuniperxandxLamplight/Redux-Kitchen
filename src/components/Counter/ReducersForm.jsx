@@ -16,24 +16,24 @@ function ReducersForm(){
         <p>10</p>
       </div>
       <form>
-        <p>{"function waffleBot(state = initialState, action){"}</p>
-        <p>&nbsp;{"switch(action.type{"}</p>
-        <p>&nbsp;&nbsp;{"case 'COOK_WAFFLE':"}</p>
-        <p>&nbsp;&nbsp;&nbsp;{"return {cookedWaffles: cookedWaffles + 1}"}</p>
+        <p>{'function waffleBot(state = initialState, action){'}</p>
+        <p>&nbsp;{'switch(action.type{'}</p>
+        <p>&nbsp;&nbsp;{'case \'COOK_WAFFLE\':'}</p>
+        <p>&nbsp;&nbsp;&nbsp;{'return {cookedWaffles: cookedWaffles + 1}'}</p>
         <p>
-          &nbsp;&nbsp;{"case "}
+          &nbsp;&nbsp;{'case '}
           <input placeholder="action type"></input>
-          {":"}
+          {':'}
         </p>
         <p>
-          &nbsp;&nbsp;&nbsp;{"return {"}
+          &nbsp;&nbsp;&nbsp;{'return {'}
           <input placeholder="state slice"></input>
-          {":"}
+          {':'}
           <input placeholder="state slice"></input>
-          {" + 1}"}
+          {' + 1}'}
         </p>
-        <p>&nbsp;{"}"}</p>
-        <p>{"}"}</p>
+        <p>&nbsp;{'}'}</p>
+        <p>{'}'}</p>
         <button type="submit">Dispatch</button>
       </form>
       <style jsx>{`

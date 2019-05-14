@@ -6,7 +6,7 @@ function CounterContainer() {
   return (
     <div>I'm the counter!
     </div>
-  )
+  );
 }
 
 // <ActionsForm/>
