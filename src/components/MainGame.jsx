@@ -1,17 +1,17 @@
 import React from 'react';
 import GameContainer from'./GameContainer';
 import InstructionsDisplay from'./LeftPanel/InstructionsDisplay';
-import CounterContainer from'./Counter/CounterContainer';
+import StateContainer from './RightPanel/StateContainer';
 
 function MainGame() {
   return(
     <div>
-      <p>I am Game Container</p>
-      <GameContainer />
-      <InstructionsDisplay />
+      <p>I am Main Container</p>
+      <GameContainer/>
+      <InstructionsDisplay/>
+      <StateContainer/>
     </div>
-
-  )
+  );
 }
 
 export default MainGame;

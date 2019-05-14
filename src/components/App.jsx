@@ -11,6 +11,7 @@ function App() {
   return (
     <div>
       <Header/>
+      <MainGame/>
         {/* <Switch>
           <Route exact path='/' component={Welcome} />
           <Route path='/game' component={MainGame} />
