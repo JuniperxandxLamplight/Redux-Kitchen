@@ -4,7 +4,7 @@ function StateSlice(props) {
   return(
     <div>
       <h3>{props.slice.id}</h3>
-      <p>State =  <br/> 
+      <p>State =  <br/>
       <span></span>
       </p>
     </div>
