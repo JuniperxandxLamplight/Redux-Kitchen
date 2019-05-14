@@ -7,7 +7,7 @@ import userStateReducer from '../../src/reducers/userStateReducer';
 import rootReducer from '../../src/reducers';
 
 
-describe('levelReducer', () => {
+describe('reducers', () => {
     const {initialState, types } = constants;
     const store = createStore(rootReducer, initialState);
 
@@ -19,6 +19,18 @@ describe('levelReducer', () => {
 
     it("should increment userLevel up by one when level_up is called", () => {
       expect(levelReducer(initialState.userLevel, actions.levelUp() )).toEqual(2)
+    });
+
+  });
+
+  describe('dayToggleReducer', () => {
+
+    it("should accept and return initial state", () => {
+      expect(dayToggleReducer(initialState.dayTime, {type: null})).toEqual(true)
+    });
+
+    it("should toggle dayTime between true and false: false this time", () => {
+      expect(dayToggleReducer(initialState.dayTime, actions.dayToggle())).toEqual(false)
     });
 
   });
