@@ -3,6 +3,6 @@ import levelReducer from './levelReducer';
 
 const rootReducer = combineReducers({
   userLevel: levelReducer
-})
+});
 
 export default rootReducer;

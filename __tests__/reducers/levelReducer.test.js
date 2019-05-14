@@ -20,4 +20,18 @@ describe('levelReducer', () => {
     });
 
   })
-})
+
+
+  describe('rootReducer', () => {
+    it('Should accept and return initial state.', () => {
+      expect(rootReducer(initialState, { type: null })).toEqual(initialState);
+    });
+
+    it('Should contain logic from both reducers.', () => {
+      expect(store.getState().userLevel).toEqual(levelReducer(undefined, { type: null }));
+    //   expect(store.getState().?????????).toEqual(?????????(undefined, { type: null }));
+    });
+  });
+
+});
+
