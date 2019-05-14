@@ -1,10 +1,11 @@
 import React from 'react';
-
+import Logo from './Logo'
+import styles from './styles';
 
 function Header(){
   return(
-    <div>
-      <h1>Redux Kitchen</h1>
+    <div style={styles}>
+      <Logo/>
     </div>
   );
 }
