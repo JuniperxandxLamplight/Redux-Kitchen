@@ -1,10 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import StateDisplay from './StateDisplay';
 
-function StateContainer() {
+function StateContainer(props) {
+  const kitchen = props.state.userState.kitchen;
+  const pantry = props.state.userState.pantry;
   return(
     <div className='main'>
-      <StateDisplay />
+      <StateDisplay kitchen={kitchen}
+                    pantry={pantry} />
       <style jsx>{`
         .main {
           background-color: #C7AA71;
@@ -16,4 +20,10 @@ function StateContainer() {
   )
 }
 
-export default StateContainer;
+const mapStateToProps = state => {
+  return {
+    state: state,
+  }
+}
+
+export default connect(mapStateToProps)(StateContainer);

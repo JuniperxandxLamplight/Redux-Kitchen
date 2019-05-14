@@ -20,12 +20,12 @@ function App() {
         }
         `}</style>
       <Header/>
-
+        <StateContainer />
       <Switch>
-          <Route exact path='/' component={Welcome} />
-          <Route path='/game' component={MainGame} />
-          <Route path='/glossary' component={Glossary} />
-          <Route component={Error404} />
+        <Route exact path='/' component={Welcome} />
+        <Route path='/game' component={MainGame} />
+        <Route path='/glossary' component={Glossary} />
+        <Route component={Error404} />
       </Switch>
 
     </div>
