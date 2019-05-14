@@ -1,12 +1,12 @@
 export const initialState = {
 
   userState: {
-    Kitchen: {
+    kitchen: {
       waffles: 1,
       strawberryWaffles: 2,
       biscuits: 2
     },
-    Pantry: {
+    pantry: {
       batter: 5,
       strawberries: 7
     }
