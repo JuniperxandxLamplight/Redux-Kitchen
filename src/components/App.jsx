@@ -26,7 +26,7 @@ function App() {
           <Route path='/game' component={MainGame} />
           <Route path='/glossary' component={Glossary} />
           <Route component={Error404} />
-      </Switch> 
+      </Switch>
 
     </div>
 

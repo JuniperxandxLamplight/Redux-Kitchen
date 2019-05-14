@@ -4,7 +4,7 @@ import StateDisplay from './StateDisplay';
 function StateContainer() {
   return(
     <div className='main'>
-      <StateDisplay /> 
+      <StateDisplay />
       <style jsx>{`
         .main {
           background-color: #C7AA71;

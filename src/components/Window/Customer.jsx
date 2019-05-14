@@ -2,7 +2,7 @@ import React from 'react';
 
 function Customer(){
   return(
-    <div></div>
+    <div>insert person here</div>
   )
 }
 

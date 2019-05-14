@@ -9,8 +9,8 @@ function StateDisplay() {
       <h2>State</h2>
         <div>
           <h3></h3>
-          <p>State = &#123; <br/> 
-          <br/> 
+          <p>State = &#123; <br/>
+          <br/>
             <span className="kitchenState">&nbsp; &nbsp;Kitchen: &#123; <br/>
               &nbsp; &nbsp; &nbsp; &nbsp;waffles: {kitchen.waffles}, <br/>
               &nbsp; &nbsp; &nbsp; &nbsp;biscuits: {kitchen.biscuits}, <br/>
@@ -23,7 +23,7 @@ function StateDisplay() {
               &nbsp; &nbsp; &nbsp; &nbsp;strawberries: {pantry.strawberries}, <br/>
               &nbsp; &nbsp;&#125;
             </span><br/>
-            <br/> 
+            <br/>
             &#125;
           </p>
         </div>
@@ -42,4 +42,4 @@ function StateDisplay() {
   )
 }
 
-export default StateDisplay; 
+export default StateDisplay;
