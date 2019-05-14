@@ -1,6 +1,8 @@
 const styles = {
-  height : '100%',
-  width : 'auto',
-};
+
+  maxHeight : "100%",
+  width : "auto",
+  maxWidth : "90%"
+}
 
 export default styles;
