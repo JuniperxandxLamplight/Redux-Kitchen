@@ -18,7 +18,7 @@ function App() {
         `}</style>
       <Header/>
       <Switch>
-        <Route exact path='/' component={Welcome} />
+        <Route exact path='/' component={MainGame} />
         <Route path='/game' component={MainGame} />
         <Route path='/glossary' component={Glossary} />
         <Route component={Error404} />

@@ -9,10 +9,10 @@ function Upkeep(){
       <img className="syrup" src={syrup} />
       <style jsx>{`
         div{
-          width: 400px;
-          height: auto;
+          width: 100%;
+          height: 100%;
           display: grid;
-          grid-template: 1fr 2fr 4fr / 1fr 2fr 4fr;
+          grid-template: 1fr 2fr 10fr / 1fr 2fr 10fr;
         };
         .waffle{
           z-index: 1;
@@ -25,7 +25,7 @@ function Upkeep(){
         };
         .syrup{
           width: 100%;
-          height: auto;
+          height: 100%;
           grid-column-start: 2;
           grid-column-end: 4;
           grid-row-start: 2;

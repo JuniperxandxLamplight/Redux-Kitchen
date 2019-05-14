@@ -5,19 +5,16 @@ import customer3 from './../../assets/images/Customer3.png';
 
 function Customer(){
   const customers = [customer1, customer2, customer3];
-  const trial = customers[(Math.floor(Math.random()*customers.length))]
-  console.log(trial);
   return(
     <div>
-      <img src={trial} alt="customer"/>
+      <img src={customers[(Math.floor(Math.random()*customers.length))]} alt="customer"/>
       <style jsx>{`
         div{
           width: 100%;
+          height: 100%;
         };
         img{
-          width: 75%;
-          height: auto;
-          margin-left: 25%;
+          height: 100%;
         }
       `}</style>
     </div>
