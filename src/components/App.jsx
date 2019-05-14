@@ -6,7 +6,6 @@ import Welcome from './Welcome';
 import Glossary from './Glossary';
 import Error404 from './Error404';
 
-import StateContainer from './RightPanel/StateContainer';
 
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
         }
         `}</style>
       <Header/>
-        <StateContainer />
       <Switch>
         <Route exact path='/' component={Welcome} />
         <Route path='/game' component={MainGame} />
