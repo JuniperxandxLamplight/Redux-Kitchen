@@ -2,6 +2,7 @@ import constants from './../../src/constants';
 import {createStore} from 'redux';
 import * as actions from './../../src/actions';
 import levelReducer from '../../src/reducers/levelReducer';
+import dayToggleReducer from '../../src/reducers/dayToggleReducer';
 import userStateReducer from '../../src/reducers/userStateReducer';
 import rootReducer from '../../src/reducers';
 
@@ -20,7 +21,7 @@ describe('levelReducer', () => {
       expect(levelReducer(initialState.userLevel, actions.levelUp() )).toEqual(2)
     });
 
-  })
+  });
 
 
   describe('rootReducer', () => {
@@ -31,6 +32,7 @@ describe('levelReducer', () => {
     it('Should contain logic from both reducers.', () => {
       expect(store.getState().userLevel).toEqual(levelReducer(undefined, { type: null }));
       expect(store.getState().userState).toEqual(userStateReducer(undefined, { type: null }));
+      expect(store.getState().dayTime).toEqual(dayToggleReducer(undefined, { type: null }));
     });
   });
 
