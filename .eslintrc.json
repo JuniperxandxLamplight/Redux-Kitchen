@@ -30,11 +30,11 @@
     "react/prop-types": 2,
     "react/forbid-prop-types": 1,
     "react/default-props-match-prop-types": [
-      "error", 
+      "error",
       { "allowRequiredDefaults": false }
     ],
     "react/jsx-curly-brace-presence": [
-      "error", 
+      "error",
       { "props": "never", "children": "never" }
     ],
     "react/jsx-indent-props": [
@@ -48,10 +48,6 @@
     "indent": [
       "error",
       2
-    ],
-    "linebreak-style": [
-      "error",
-      "unix"
     ],
     "quotes": [
       "error",
