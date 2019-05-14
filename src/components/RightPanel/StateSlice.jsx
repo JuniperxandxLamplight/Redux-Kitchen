@@ -1,9 +1,14 @@
 import React from 'react';
 
-function StateSlice(){
+function StateSlice(props) {
   return(
-    <div>I'm a state slice!</div>
-  );
+    <div>
+      <h3>{props.slice.id}</h3>
+      <p>State =  <br/>
+      <span></span>
+      </p>
+    </div>
+  )
 }
 
 export default StateSlice;
