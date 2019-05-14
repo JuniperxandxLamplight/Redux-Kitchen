@@ -10,7 +10,7 @@ function GameContainer() {
       <CounterContainer />
     </div>
 
-  )
+  );
 }
 
 export default GameContainer;

@@ -10,5 +10,5 @@ export const UserStateSlices = {
     batter: 5,
     strawberries: 7
   }
-}
+};
 
