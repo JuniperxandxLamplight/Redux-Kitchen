@@ -1,15 +1,19 @@
 import React from 'react';
-import styles from './styles';
+import {imageStyles, butterStyles} from './styles';
 import ButterButton from './../ButterButton';
 
 function WelcomeWaffle() {
   return (
-    <div>
+    <div style={{position: "relative"}}>
       <img
-        style={styles}
+        style={imageStyles}
         src={require("./../../../assets/images/welcomeWaffle.png")}
       />
+    <div style={butterStyles}>
+        <ButterButton/>
+      </div>
     </div>
+
   )
 }
 

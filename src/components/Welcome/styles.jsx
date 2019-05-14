@@ -10,8 +10,14 @@ export const waffleStyles = {
   top: "40%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  height : "70%",
   zIndex: "10",
+
+  height: "60%",
+  width: "100%",
+  maxWidth: "1440px",
+
+  padding: "0px 20px",
+  margin: "0 auto"
 }
  export const messageStyles = {
    position : "absolute",
