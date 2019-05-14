@@ -1,7 +1,7 @@
 export const imageStyles = {
   height : '100%',
   width: '100%'
-}
+};
 
 export const butterStyles = {
   position: 'absolute',

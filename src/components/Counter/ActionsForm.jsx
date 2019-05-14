@@ -11,12 +11,12 @@ function ActionsForm(){
         <p>5</p>
       </div>
       <form>
-        <p>action = {"{"}</p>
+        <p>action = {'{'}</p>
         <p>
           type :
           <input placeholder="action type"></input>
         </p>
-        <p>{"}"}</p>
+        <p>{'}'}</p>
         <button type="submit">Dispatch</button>
       </form>
       <style jsx>{`

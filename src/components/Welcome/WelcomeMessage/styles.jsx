@@ -1,14 +1,14 @@
 const styles = {
-  backgroundColor : "#B6765A",
+  backgroundColor : '#B6765A',
 
-  display: "flex",
-  justifyContent: "center",
-  alignItems : "center",
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems : 'center',
 
-  height: "100%",
-  width: "100%",
+  height: '100%',
+  width: '100%',
 
-  borderRadius: "36px"
-}
+  borderRadius: '36px'
+};
 
 export default styles;

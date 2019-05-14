@@ -9,7 +9,7 @@ function WindowContainer() {
       <SpeechBubble/>
       <Customer/>
     </div>
-  )
+  );
 }
 
 export default WindowContainer;
