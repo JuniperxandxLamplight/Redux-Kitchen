@@ -14,6 +14,7 @@ function Welcome() {
       <div style={messageStyles}>
         <WelcomeMessage/>
       </div>
+
     </div>
   )
 }

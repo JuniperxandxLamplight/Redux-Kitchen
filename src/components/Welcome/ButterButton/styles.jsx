@@ -1,3 +1,5 @@
 const styles = {
-  width : "30%",
+  width : "100%",
 }
+
+export default styles;
