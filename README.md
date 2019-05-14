@@ -10,7 +10,7 @@ _This application is meant as a learning tool for those new to Redux, to give an
 
 ## Component Tree
 
-![alt text](src/assets/images/ReduxKitchen.png)
+![alt text](src/assets/images/ReduxKitchen2.png)
 
 ## State Shapes
 
