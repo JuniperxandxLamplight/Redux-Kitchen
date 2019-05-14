@@ -6,7 +6,7 @@ import CounterContainer from'./Counter/CounterContainer';
 function MainGame() {
   return(
     <div>
-      <p>I am Game Container</p>
+      <p>I am Main Game</p>
       <GameContainer />
       <InstructionsDisplay />
     </div>
