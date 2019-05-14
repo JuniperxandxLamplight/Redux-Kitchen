@@ -1,9 +1,8 @@
 import React from 'react';
-import {UserStateSlices} from './../dummyData';
 
-function StateDisplay() {
-  const kitchen = UserStateSlices.Kitchen;
-  const pantry = UserStateSlices.Pantry;
+function StateDisplay(props) {
+  console.log(props.kitchen)
+  
   return(
     <div className="display">
       <h2>State</h2>
@@ -12,15 +11,15 @@ function StateDisplay() {
           <p>State = &#123; <br/>
           <br/>
             <span className="kitchenState">&nbsp; &nbsp;Kitchen: &#123; <br/>
-              &nbsp; &nbsp; &nbsp; &nbsp;waffles: {kitchen.waffles}, <br/>
-              &nbsp; &nbsp; &nbsp; &nbsp;biscuits: {kitchen.biscuits}, <br/>
-              &nbsp; &nbsp; &nbsp; &nbsp;strawberryWaffles: {kitchen.strawberryWaffles} <br/>
+              &nbsp; &nbsp; &nbsp; &nbsp;waffles: {props.kitchen.waffles}, <br/>
+              &nbsp; &nbsp; &nbsp; &nbsp;biscuits: {props.kitchen.biscuits}, <br/>
+              &nbsp; &nbsp; &nbsp; &nbsp;strawberryWaffles: {props.kitchen.strawberryWaffles} <br/>
               &nbsp; &nbsp;&#125;
             </span><br/>
             <br/>
             <span className="pantryState">&nbsp; &nbsp;Pantry: &#123; <br/>
-              &nbsp; &nbsp; &nbsp; &nbsp;batter: {pantry.batter}, <br/>
-              &nbsp; &nbsp; &nbsp; &nbsp;strawberries: {pantry.strawberries}, <br/>
+              &nbsp; &nbsp; &nbsp; &nbsp;batter: {props.pantry.batter}, <br/>
+              &nbsp; &nbsp; &nbsp; &nbsp;strawberries: {props.pantry.strawberries}, <br/>
               &nbsp; &nbsp;&#125;
             </span><br/>
             <br/>
