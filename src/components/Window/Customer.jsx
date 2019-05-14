@@ -5,9 +5,21 @@ import customer3 from './../../assets/images/Customer3.png';
 
 function Customer(){
   const customers = [customer1, customer2, customer3];
+  const trial = customers[(Math.floor(Math.random()*customers.length))]
+  console.log(trial);
   return(
     <div>
-      <img src={customers[(Math.floor(Math.random()*4)) - 1]} alt="customer"/>
+      <img src={trial} alt="customer"/>
+      <style jsx>{`
+        div{
+          width: 100%;
+        };
+        img{
+          width: 75%;
+          height: auto;
+          margin-left: 25%;
+        }
+      `}</style>
     </div>
   )
 }

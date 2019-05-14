@@ -9,10 +9,12 @@ function SpeechBubble(){
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 30%;
+          width: 90%;
+          margin-right: 10%;
           height: 150px;
           border: 3px solid black;
-          border-radius: 100%;
+          border-radius: 75%;
+          background-color: white;
         }
       `}</style>
     </div>
