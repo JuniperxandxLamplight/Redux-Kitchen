@@ -17,7 +17,7 @@ function StateDisplay() {
               &nbsp; &nbsp; &nbsp; &nbsp;strawberryWaffles: {kitchen.strawberryWaffles} <br/>
               &nbsp; &nbsp;&#125;
             </span><br/>
-            <br/> 
+            <br/>
             <span className="pantryState">&nbsp; &nbsp;Pantry: &#123; <br/>
               &nbsp; &nbsp; &nbsp; &nbsp;batter: {pantry.batter}, <br/>
               &nbsp; &nbsp; &nbsp; &nbsp;strawberries: {pantry.strawberries}, <br/>
