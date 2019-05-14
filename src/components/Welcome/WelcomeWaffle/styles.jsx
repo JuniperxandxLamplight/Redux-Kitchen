@@ -10,5 +10,6 @@ export const butterStyles = {
   transform: 'translate(-50%, -50%)',
   textAlign: 'center',
 
-  maxWidth: "15%"
+  maxWidth: "15%",
+  minWidth: "100px"
 }
