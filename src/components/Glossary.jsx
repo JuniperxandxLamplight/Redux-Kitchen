@@ -5,34 +5,33 @@ function Glossary(){
   return(
     <div className = 'glossaryContainer'>
       <style jsx>{`
-          .glossaryContainer {
-            background: rgba(199, 170, 113, 0.5);
-            padding: 2rem 3rem;
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            grid-column-gap: .25rem;
-            grid-row-gap: 1rem;
-          }
+        .glossaryContainer {
+          background: rgba(199, 170, 113, 0.5);
+          padding: 2rem 3rem;
+          display: grid;
+          grid-template-columns: 1fr 3fr;
+          grid-column-gap: .25rem;
+          grid-row-gap: 1rem;
+        }
 
-          h1 {
-            grid: 1 / span 2;
-            font-size: 2rem;
-          }
+        h1 {
+          grid: 1 / span 2;
+          font-size: 2rem;
+        }
 
-          li {
-            disc-style: none;
-          }
+        li {
+          disc-style: none;
+        }
 
-          .term, .def {
-            font-size: 1rem;
-            line-height: 133%;
-          }
+        .term, .def {
+          font-size: 1rem;
+          line-height: 133%;
+        }
 
-          .term {
-            font-weight: bold;
-          }
-          `}
-      </style>
+        .term {
+          font-weight: bold;
+        }
+      `}</style>
       <h1>Glossary</h1>
       <div className = 'term'>Action</div>
       <div className = 'def'>An object that represents intention to change state. Although we don't change state directly, we can change a copy of state and assign it back. An action is dispatched to the store and handled by a reducer.</div>
@@ -60,13 +59,13 @@ function Glossary(){
 
       <div className = 'term'>More Resources</div>
       <div className = 'def'>
-          <ul>
-            <li><a href='https:\/\/redux.js.org/glossary' target='_blank'>Redux.js.org</a></li>
-            <li><a href='https:\/medium.freecodecamp.org/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6' target='_blank'>Free Code Camp</a></li>
-            <li><a href='https:\/\/www.codecademy.com/articles/glossary-javascript' target='_blank'>Code Academy</a></li>
-            <li><a href='https:\/\/lorenstewart.me/2016/11/27/a-practical-guide-to-redux/'  target='_blank'>A Practical Guide to Redux</a></li>
-            <li><a href='https:\/\/dev.to/hemanth/explain-redux-like-im-five'  target='_blank'>Explain Redux Like I'm Five</a></li>
-          </ul>
+        <ul>
+          <li><a href='https:\/\/redux.js.org/glossary' target='_blank'>Redux.js.org</a></li>
+          <li><a href='https:\/medium.freecodecamp.org/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6' target='_blank'>Free Code Camp</a></li>
+          <li><a href='https:\/\/www.codecademy.com/articles/glossary-javascript' target='_blank'>Code Academy</a></li>
+          <li><a href='https:\/\/lorenstewart.me/2016/11/27/a-practical-guide-to-redux/'  target='_blank'>A Practical Guide to Redux</a></li>
+          <li><a href='https:\/\/dev.to/hemanth/explain-redux-like-im-five'  target='_blank'>Explain Redux Like I'm Five</a></li>
+        </ul>
       </div>
 
     </div>

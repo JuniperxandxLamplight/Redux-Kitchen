@@ -1,7 +1,7 @@
 export const initialState = {
 
   userState: {
-    kitchen: {
+    servedFood: {
       waffles: 1,
       strawberryWaffles: 2,
       biscuits: 2
@@ -14,5 +14,24 @@ export const initialState = {
 
   userLevel: 1,
   dayTime: true,
-  customerCount: 1
+  customerCount: 1,
+
+<<<<<<< HEAD
+  levelData: {
+    1: {
+      dayInstructions: '',
+      nightInstructions: '',
+      answersDay: ["COOK_WAFFLES", "COOK_WAFFLES", "COOK_WAFFLES"],
+      answersNight: ["COOK_BISCUITS", "biscuits", "biscuits"],
+    },
+    2: {
+      dayInstructions: '',
+      nightInstructions: '',
+      answersDay: ["COOK_WAFFLES"],
+      answersNight: [],
+    }
+  }
 };
+=======
+};
+>>>>>>> master

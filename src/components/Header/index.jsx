@@ -46,7 +46,7 @@ function Header(){
       </style>
       <div className='left'></div>
       <div className='center'>
-          <Logo/>
+        <Logo/>
       </div>
       <div className='right'>
         <div className='links'>
