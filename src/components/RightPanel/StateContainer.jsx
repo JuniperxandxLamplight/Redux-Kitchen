@@ -7,10 +7,12 @@ function StateContainer(props) {
   const kitchen = props.state.userState.kitchen;
   const pantry = props.state.userState.pantry;
   return(
-    <div className='main'>
+    <div className='state-container'>
       <StateDisplay kitchen={kitchen}
         pantry={pantry} />
       <style jsx>{`
+        .state-container {
+          margin-top: 15%;
         .main {
           background-color: #C7AA71;
           width: 100%;
