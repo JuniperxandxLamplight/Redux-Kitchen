@@ -30,28 +30,26 @@ function ActionsForm(){
       <style jsx>{`
         .container{
           display: flex;
-        };
+        }
         input{
           display: inline;
-          margin: 0 3px;
-          padding: 2px 5px;
-          border: none;
-        };
+        }
         .numbersBox{
           text-align: center;
           padding: 5px;
           background-color: #D1AF6E;
-        };
+        }
         form{
           padding: 5px 70px 5px 15px;
           background-color: #C4C4C4;
-        };
+        }
         button{
           margin-left: 30%;
           padding: 3px 15px;
           border: none;
           border-radius: 5px;
           background-color: red;
+          cursor: pointer;
         }
       `}</style>
     </div>
