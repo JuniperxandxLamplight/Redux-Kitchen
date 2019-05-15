@@ -36,6 +36,7 @@ function MainGame() {
           background-color: #C7AA71;
         }
         .window{
+          z-index: -3;
           grid-row: 1/3;
           grid-column: 2/4;
           background-color: #8CB490;
