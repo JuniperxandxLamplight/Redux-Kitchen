@@ -5,13 +5,12 @@ import {connect} from 'react-redux';
 
 function InstructionsDisplay(props) {
 
-  let time;
+  let instructions;
   if (props.state.dayTime){
-    time = 'dayInstructions';
+    instructions = constants.levelData[props.state.userLevel].dayInstructions.split("*>");
   } else {
-    time = 'nightInstructions';
+    instructions = '';
   }
-  const instructions = constants.levelData[props.state.userLevel][time].split("*>");
 
   return(
     <div className='instructions-display'>
