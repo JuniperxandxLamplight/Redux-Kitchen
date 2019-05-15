@@ -1,4 +1,6 @@
 import React from 'react';
+import CounterContainer from './Counter/CounterContainer';
+import StateContainer from './RightPanel/StateContainer';
 import WindowContainer from './Window/WindowContainer';
 
 function MainGame() {

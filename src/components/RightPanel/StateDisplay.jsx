@@ -31,7 +31,6 @@ function StateDisplay(props) {
       <style jsx>{`
         .display {
           padding: 5px;
-          //this width can change when grid happens
           width: 180px;
           margin: 0 auto;
         }
