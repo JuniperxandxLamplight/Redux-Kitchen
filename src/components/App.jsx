@@ -24,13 +24,6 @@ function App() {
         }
         `}</style>
       <Header/>
-      <Glossary/>
-      <Switch>
-          <Route exact path='/' component={Welcome} />
-          <Route path='/game' component={MainGame} />
-          // <Route path='/glossary' component={Glossary} />
-          <Route component={Error404} />
-      </Switch>
 
     </div>
 
@@ -40,3 +33,10 @@ function App() {
 
 
 export default App;
+
+// <Switch>
+//     <Route exact path='/' component={Welcome} />
+//     <Route path='/game' component={MainGame} />
+//     <Route path='/glossary' component={Glossary} />
+//     <Route component={Error404} />
+// </Switch>

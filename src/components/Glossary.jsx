@@ -15,8 +15,7 @@ function Glossary(){
           }
 
           h1 {
-            grid-column-start: 1;
-            grid-column-end: span 2;
+            grid: 1 / span 2;
             font-size: 2rem;
           }
 
