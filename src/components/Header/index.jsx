@@ -41,5 +41,3 @@ function Header(){
 }
 
 export default Header;
-// <div className='logo'>
-// </div>
