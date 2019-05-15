@@ -2,14 +2,31 @@ import React from 'react';
 import SpeechBubble from './SpeechBubble';
 import Customer from './Customer';
 import Upkeep from './Upkeep';
+import {connect} from 'react-redux';
 
-function WindowContainer() {
+function WindowContainer(props) {
+
+  let custView;
+  let speechView;
+  let nightView;
+
+  if (props.state.dayTime){
+    custView = <Customer/>
+    speechView = <SpeechBubble/>
+    nightView = <div></div>
+  } else {
+    custView = <div></div>
+    speechView = <div></div>
+    nightView = <Upkeep/>
+  }
+
   return (
     <div className="container">
       <div className="customerBox">
-        <Customer/>
-        <SpeechBubble/>
+        {custView}
+        {speechView}
       </div>
+        {nightView}
       <style  jsx>{`
         .container{
           background-color: #8CB490;
@@ -29,8 +46,10 @@ function WindowContainer() {
   );
 }
 
-export default WindowContainer;
+const mapStateToProps = state => {
+  return{
+    state: state
+  }
+}
 
-
-// add in conditionally based on day/night and level
-// <Upkeep/>
+export default connect(mapStateToProps)(WindowContainer);

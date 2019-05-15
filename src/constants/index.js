@@ -4,11 +4,10 @@ import levels from './levels'
 import { levelData } from './levelData';
 
 
+
 export default {
   initialState: initialState,
   types: types,
-
   levels: levels,
-  levelData: levelData,
+  levelData: levelData
 };
-
