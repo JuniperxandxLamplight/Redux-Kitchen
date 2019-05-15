@@ -1,9 +1,26 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
-function SpeechBubble(){
+function SpeechBubble(props){
+
+  let waffleNumber;
+  if (props.state.userLevel < 3){
+    waffleNumber = 1;
+  } else {
+    waffleNumber = Math.floor(Math.random()*4);
+  }
+
+  let items = ['waffle', 'biscuit'];
+  let item;
+  if (props.state.userLevel < 1){
+    item = waffle;
+  } else {
+    item = items[Math.floor(Math.random()*2)];
+  }
+
   return(
     <div>
-      <p>1 waffle please!</p>
+      <p>{waffleNumber} {item} please!</p>
       <style jsx>{`
         div{
           display: flex;
@@ -21,4 +38,10 @@ function SpeechBubble(){
   );
 }
 
-export default SpeechBubble;
+const mapStateToProps = state => {
+  return{
+    state: state
+  }
+}
+
+export default connect(mapStateToProps)(SpeechBubble);

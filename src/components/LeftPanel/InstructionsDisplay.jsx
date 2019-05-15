@@ -9,7 +9,7 @@ function InstructionsDisplay(props) {
   if (props.state.dayTime){
     instructions = constants.levelData[props.state.userLevel].dayInstructions.split("*>");
   } else {
-    instructions = '';
+    instructions = [''];
   }
 
   return(
