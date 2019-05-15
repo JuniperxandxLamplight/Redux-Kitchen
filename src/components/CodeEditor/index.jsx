@@ -3,15 +3,19 @@ import constants from './../../constants';
 const {levels} = constants;
 
 import Line from './Line';
-
-function CodeEditor() {
+import {connect} from 'react-redux';
+function CodeEditor(props) {
   return (
     <div>
-    {levels[1].codeLines.map(function(lineText, index) {
+    {levels[props.level].editorText.map(function(lineText, index) {
       return <Line text={lineText} key={index}/>
     })}
     </div>
   )
 }
 
-export default CodeEditor;
+const mapStateToProps = (state) => ({
+  level: state.userLevel
+})
+
+export default connect(mapStateToProps)(CodeEditor);

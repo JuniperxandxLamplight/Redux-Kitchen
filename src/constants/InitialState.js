@@ -12,7 +12,7 @@ export const initialState = {
     }
   },
 
-  userLevel: 1,
+  userLevel: 2,
   dayTime: true,
   customerCount: 1,
 
