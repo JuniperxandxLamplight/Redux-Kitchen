@@ -22,7 +22,6 @@ function MainGame() {
       <div className='window'>
         <WindowContainer/>
       </div>
-    </div>
 
       <style jsx>{`
         .structure{
