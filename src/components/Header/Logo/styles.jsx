@@ -1,9 +1,9 @@
 const styles = {
 
-  maxHeight : "80px",
+  maxHeight : "100%",
   width : "auto",
   maxWidth : "90%",
-  border : "1px solid #f00"
+  placeSelf: "center"
 }
 
 export default styles;
