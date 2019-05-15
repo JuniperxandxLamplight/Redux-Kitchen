@@ -1,9 +1,10 @@
 const styles = {
   width : '100%',
-  height : '80px',
+  height : '8vw',
+  maxHeight : '80px',
   backgroundColor : '#B6765A',
   display : 'flex',
-  justifyContent : 'center' 
+  justifyContent : 'center'
 };
 
 export default styles;
