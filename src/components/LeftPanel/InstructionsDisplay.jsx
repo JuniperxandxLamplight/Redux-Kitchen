@@ -4,11 +4,16 @@ import constants from './../../constants';
 import {connect} from 'react-redux';
 
 function InstructionsDisplay(props) {
+
+  const instructions = constants.levelData[props.state.userLevel].dayInstructions.split("*>");
+
   return(
     <div className='instructions-display'>
       <h1>INSTRUCTIONS</h1>
       <h3>Day {props.state.userLevel}</h3>
-      <p>{constants.levelData[props.state.userLevel].dayInstructions}</p>
+      {instructions.map((paragraph) => {
+        return <p>{paragraph}</p>
+      })}
 
       <ReducerDisplay/>
 
@@ -23,6 +28,7 @@ function InstructionsDisplay(props) {
         }
         p{
           text-align: left;
+          margin-top: 5px;
         }
       `}</style>
     </div>
