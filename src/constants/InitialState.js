@@ -16,22 +16,4 @@ export const initialState = {
   dayTime: true,
   customerCount: 1,
 
-<<<<<<< HEAD
-  levelData: {
-    1: {
-      dayInstructions: '',
-      nightInstructions: '',
-      answersDay: ["COOK_WAFFLES", "COOK_WAFFLES", "COOK_WAFFLES"],
-      answersNight: ["COOK_BISCUITS", "biscuits", "biscuits"],
-    },
-    2: {
-      dayInstructions: '',
-      nightInstructions: '',
-      answersDay: ["COOK_WAFFLES"],
-      answersNight: [],
-    }
-  }
 };
-=======
-};
->>>>>>> master
