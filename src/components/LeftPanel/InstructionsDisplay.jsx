@@ -5,7 +5,13 @@ import {connect} from 'react-redux';
 
 function InstructionsDisplay(props) {
 
-  const instructions = constants.levelData[props.state.userLevel].dayInstructions.split("*>");
+  let time;
+  if (props.state.dayTime){
+    time = 'dayInstructions';
+  } else {
+    time = 'nightInstructions';
+  }
+  const instructions = constants.levelData[props.state.userLevel][time].split("*>");
 
   return(
     <div className='instructions-display'>
@@ -28,7 +34,7 @@ function InstructionsDisplay(props) {
         }
         p{
           text-align: left;
-          margin-top: 5px;
+          margin-top: 15px;
         }
       `}</style>
     </div>
