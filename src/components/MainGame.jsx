@@ -1,5 +1,4 @@
 import React from 'react';
-
 import CodeEditor from './CodeEditor';
 import InstructionsDisplay from './LeftPanel/InstructionsDisplay';
 import StateContainer from './RightPanel/StateContainer';
@@ -22,7 +21,6 @@ function MainGame() {
       <div className='window'>
         <WindowContainer/>
       </div>
-    </div>
 
       <style jsx>{`
         .structure{
