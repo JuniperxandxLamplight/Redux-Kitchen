@@ -8,6 +8,7 @@ import WindowContainer from './Window/WindowContainer';
 
 function MainGame() {
   return(
+
     <div className='structure'>
       <div className='left'>
         <InstructionsDisplay/>
@@ -29,6 +30,7 @@ function MainGame() {
           display: grid;
           grid-template-rows: repeat(3, 1fr);
           grid-template-columns: repeat(4, 1fr);
+          overflow: hidden;
         }
         .left{
           grid-row: 1/4;

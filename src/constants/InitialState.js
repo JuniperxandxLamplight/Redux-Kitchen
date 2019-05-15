@@ -1,7 +1,7 @@
 export const initialState = {
 
   userState: {
-    kitchen: {
+    servedFood: {
       waffles: 1,
       strawberryWaffles: 2,
       biscuits: 2
@@ -16,6 +16,7 @@ export const initialState = {
   dayTime: true,
   customerCount: 1,
 
+<<<<<<< HEAD
   levelData: {
     1: {
       dayInstructions: '',
@@ -31,3 +32,6 @@ export const initialState = {
     }
   }
 };
+=======
+};
+>>>>>>> master
