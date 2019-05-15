@@ -27,7 +27,7 @@ function Customer(){
         }
       `}</style>
     </div>
-  )
+  );
 }
 
 export default Customer;

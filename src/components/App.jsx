@@ -14,6 +14,7 @@ function App() {
           margin : 0;
           padding: 0;
           box-sizing: border-box;
+          font-family: Arial, sans-serif;
         }
 
         body {
@@ -25,9 +26,9 @@ function App() {
       <Route path='/glossary' component={Glossary} />
 
       <Switch>
-          <Route exact path='/' component={Welcome} />
-          <Route path='/game' component={MainGame} />
-          <Route component={Error404} />
+        <Route exact path='/' component={Welcome} />
+        <Route path='/game' component={MainGame} />
+        <Route component={Error404} />
       </Switch>
     </div>
 
