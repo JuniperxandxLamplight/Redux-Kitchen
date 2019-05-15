@@ -6,11 +6,18 @@ import WindowContainer from './Window/WindowContainer';
 function MainGame() {
   return(
     <div className='structure'>
+<<<<<<< HEAD
       <p>I am Main Container</p>
       <div className='left'></div>
       <div className='window'><WindowContainer /></div>
       <div className='right'><StateContainer /></div>
       <div className='counter'><CounterContainer /></div>
+=======
+      <div className='left'>Left column</div>
+      <div className='window'>Window</div>
+      <div className='right'>Right column</div>
+      <div className='counter'>Counter</div>
+>>>>>>> master
 
       <style jsx>{`
         .structure{
