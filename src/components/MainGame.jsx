@@ -1,12 +1,14 @@
 import React from 'react';
-import Window from './Window/WindowContainer';
+import CounterContainer from './Counter/CounterContainer';
+import StateContainer from './RightPanel/StateContainer';
+import WindowContainer from './Window/WindowContainer';
 
 function MainGame() {
   return(
     <div className='structure'>
       <div className='left'>Left column</div>
       <div className='window'>
-        <Window/>
+        <WindowContainer/>
       </div>
       <div className='right'>Right column</div>
       <div className='counter'>Counter</div>
