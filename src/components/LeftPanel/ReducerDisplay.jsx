@@ -7,7 +7,7 @@ function ReducerDisplay(){
       <p>Level up</p>
       <p>User State</p>
 
-        <style jsx>{`
+      <style jsx>{`
           .reducer-display{
             margin-top: 20%;
             text-align: center;

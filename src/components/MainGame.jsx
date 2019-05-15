@@ -19,11 +19,6 @@ function MainGame() {
       <div className='window'>
         <WindowContainer/>
       </div>
-<<<<<<< HEAD
-      <div className='right'>Right column</div>
-      <div className='counter'><CounterContainer /></div>
-=======
->>>>>>> master
 
       <style jsx>{`
         .structure{

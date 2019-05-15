@@ -7,11 +7,11 @@ import ReducersForm from './ReducersForm';
 function CounterContainer(props) {
 
   let shownForm;
-    if (props.state.dayTime){
-      shownForm = <ActionsForm />;
-    } else {
-      shownForm = <ReducersForm />
-    }
+  if (props.state.dayTime){
+    shownForm = <ActionsForm />;
+  } else {
+    shownForm = <ReducersForm />;
+  }
 
   return (
     <div className='counter-container'>

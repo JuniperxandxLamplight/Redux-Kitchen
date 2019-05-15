@@ -13,6 +13,7 @@ function StateContainer(props) {
       <style jsx>{`
         .state-container {
           margin-top: 15%;
+        }
         .main {
           background-color: #C7AA71;
           width: 100%;
