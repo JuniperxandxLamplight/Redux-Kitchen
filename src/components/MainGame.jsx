@@ -1,18 +1,28 @@
 import React from 'react';
+import InstructionsDisplay from './LeftPanel/InstructionsDisplay';
+import StateContainer from './RightPanel/StateContainer';
+import CounterContainer from './Counter/CounterContainer';
 
 function MainGame() {
   return(
     <div className='structure'>
-      <p>I am Main Container</p>
-      <div className='left'>Left column</div>
-      <div className='window'>Window</div>
-      <div className='right'>Right column</div>
-      <div className='counter'>Counter</div>
+      <div className='left'>
+        <InstructionsDisplay/>
+      </div>
+      <div className='window'>
+        Window
+      </div>
+      <div className='right'>
+        <StateContainer/>
+      </div>
+      <div className='counter'>
+        <CounterContainer/>
+      </div>
 
       <style jsx>{`
         .structure{
           width: 100%;
-          height: 89vh;
+          height: 93vh;
           display: grid;
           grid-template-rows: repeat(3, 1fr);
           grid-template-columns: repeat(4, 1fr);

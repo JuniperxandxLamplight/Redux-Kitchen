@@ -13,7 +13,7 @@ function ActionsForm(){
       <form>
         <p>action = {"{"}</p>
         <p>
-          type :
+          &nbsp; &nbsp; type :
           <input placeholder="action type"></input>
         </p>
         <p>{"}"}</p>
@@ -22,25 +22,26 @@ function ActionsForm(){
       <style jsx>{`
         .container{
           display: flex;
-        };
+        }
         input{
           display: inline;
-        };
+        }
         .numbersBox{
           text-align: center;
           padding: 5px;
           background-color: #D1AF6E;
-        };
+        }
         form{
           padding: 5px 70px 5px 15px;
           background-color: #C4C4C4;
-        };
+        }
         button{
           margin-left: 30%;
           padding: 3px 15px;
           border: none;
           border-radius: 5px;
           background-color: red;
+          cursor: pointer;
         }
       `}</style>
     </div>

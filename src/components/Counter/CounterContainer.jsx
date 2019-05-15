@@ -4,11 +4,23 @@ import ReducersForm from './ReducersForm';
 
 function CounterContainer() {
   return (
-    <div>I'm the counter!
+    <div className='counter-container'>
+      <ReducersForm/>
+
+        <style jsx>{`
+          .counter-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+        `}</style>
     </div>
   )
 }
 
 // <ActionsForm/>
-// <ReducersForm/>
+
 export default CounterContainer;
