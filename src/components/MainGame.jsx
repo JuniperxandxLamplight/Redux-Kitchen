@@ -1,24 +1,14 @@
 import React from 'react';
-<<<<<<< HEAD
 import CodeEditor from './CodeEditor';
-=======
 import InstructionsDisplay from './LeftPanel/InstructionsDisplay';
 import StateContainer from './RightPanel/StateContainer';
 import CounterContainer from './Counter/CounterContainer';
 import WindowContainer from './Window/WindowContainer';
->>>>>>> master
+
 
 function MainGame() {
   return(
     <div className='structure'>
-<<<<<<< HEAD
-      <p>I am Main Container</p>
-      <div className='left'>Left column</div>
-      <div className='window'>Window</div>
-      <div className='right'>Right column</div>
-      <div className='counter'>
-        <CodeEditor/>
-=======
       <div className='left'>
         <InstructionsDisplay/>
       </div>
@@ -30,7 +20,6 @@ function MainGame() {
       </div>
       <div className='window'>
         <WindowContainer/>
->>>>>>> master
       </div>
 
       <style jsx>{`
