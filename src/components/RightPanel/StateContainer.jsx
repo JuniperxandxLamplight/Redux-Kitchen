@@ -4,17 +4,19 @@ import { connect } from 'react-redux';
 import StateDisplay from './StateDisplay';
 
 function StateContainer(props) {
-  const kitchen = props.state.userState.kitchen;
+  const servedFood = props.state.userState.servedFood;
   const pantry = props.state.userState.pantry;
   return(
-    <div className='main'>
-      <StateDisplay kitchen={kitchen}
+    <div className='state-container'>
+      <StateDisplay servedFood={servedFood}
         pantry={pantry} />
       <style jsx>{`
+        .state-container {
+          margin-top: 15%;
+        }
         .main {
           background-color: #C7AA71;
-          //this width can go away when the grid happens
-          width: 280px;
+          width: 100%;
         }
       `}</style>
     </div>

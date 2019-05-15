@@ -51,9 +51,14 @@ function Header(props){
         }
         `}
       </style>
-        <div className='left'></div>
-        <div className='center'>
-          <Logo/>
+      <div className='left'></div>
+      <div className='center'>
+        <Logo/>
+      </div>
+      <div className='right'>
+        <div className='links'>
+          <a href="#">Glossary</a>
+          <Link to="/game">Restart</Link>
         </div>
         <div className='right'>
           <div className='links'>

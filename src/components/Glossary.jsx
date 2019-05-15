@@ -71,6 +71,7 @@ function Glossary(props) {
             font-weight: bold;
           }
 
+
           .close {
             float: right;
             height: 20px;
@@ -113,6 +114,18 @@ function Glossary(props) {
 
         </div>
 
+<<<<<<< HEAD
+=======
+      <div className = 'term'>More Resources</div>
+      <div className = 'def'>
+        <ul>
+          <li><a href='https:\/\/redux.js.org/glossary' target='_blank'>Redux.js.org</a></li>
+          <li><a href='https:\/medium.freecodecamp.org/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6' target='_blank'>Free Code Camp</a></li>
+          <li><a href='https:\/\/www.codecademy.com/articles/glossary-javascript' target='_blank'>Code Academy</a></li>
+          <li><a href='https:\/\/lorenstewart.me/2016/11/27/a-practical-guide-to-redux/'  target='_blank'>A Practical Guide to Redux</a></li>
+          <li><a href='https:\/\/dev.to/hemanth/explain-redux-like-im-five'  target='_blank'>Explain Redux Like I'm Five</a></li>
+        </ul>
+>>>>>>> master
       </div>
     );
   }
