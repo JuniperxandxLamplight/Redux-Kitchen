@@ -16,8 +16,8 @@ function ReducersForm(){
         <p>10</p>
       </div>
       <form>
-        <p>{"function waffleBot(state = initialState, action){"}</p>
-        <p>&nbsp;&nbsp;&nbsp;{"switch(action.type{"}</p>
+        <p>{"function waffleBot(state = initialState, action) {"}</p>
+        <p>&nbsp;&nbsp;&nbsp;{"switch(action.type) {"}</p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"case 'COOK_WAFFLE':"}</p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"return {cookedWaffles: cookedWaffles + 1}"}</p>
         <p>

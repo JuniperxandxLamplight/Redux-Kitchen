@@ -26,11 +26,17 @@ function StateDisplay(props) {
           </p>
         </div>
       <style jsx>{`
+        .state-display{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
         h1 {
           text-align: center;
         }
         .state-code {
-          margin: 10% 0 0 30%;
+          margin-top: 10%;
+          width: 65%;
         }
       `}</style>
     </div>

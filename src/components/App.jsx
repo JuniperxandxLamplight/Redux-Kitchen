@@ -26,7 +26,7 @@ function App() {
         <Route path='/glossary' component={Glossary} />
         <Route component={Error404} />
       </Switch>
-
+      
     </div>
 
   );

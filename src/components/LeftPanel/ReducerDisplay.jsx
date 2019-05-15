@@ -9,7 +9,7 @@ function ReducerDisplay(){
 
         <style jsx>{`
           .reducer-display{
-            margin-top: 15%;
+            margin-top: 20%;
             text-align: center;
           }
         `}</style>
