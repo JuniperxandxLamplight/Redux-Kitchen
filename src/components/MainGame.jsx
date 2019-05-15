@@ -20,6 +20,7 @@ function MainGame() {
           display: grid;
           grid-template-rows: repeat(3, 1fr);
           grid-template-columns: repeat(4, 1fr);
+          overflow: hidden;
         }
         .left{
           grid-row: 1/4;
