@@ -1,4 +1,5 @@
 import React from 'react';
+import CodeEditor from './CodeEditor';
 
 function MainGame() {
   return(
@@ -7,7 +8,9 @@ function MainGame() {
       <div className='left'>Left column</div>
       <div className='window'>Window</div>
       <div className='right'>Right column</div>
-      <div className='counter'>Counter</div>
+      <div className='counter'>
+        <CodeEditor/>
+      </div>
 
       <style jsx>{`
         .structure{
