@@ -14,6 +14,20 @@ export const initialState = {
 
   userLevel: 1,
   dayTime: true,
-  customerCount: 1
+  customerCount: 1,
 
+  levelData: {
+    1: {
+      dayInstructions: '',
+      nightInstructions: '',
+      answersDay: [],
+      answersNight: [],
+    },
+    2: {
+      dayInstructions: '',
+      nightInstructions: '',
+      answersDay: [],
+      answersNight: [],
+    }
+  }
 };

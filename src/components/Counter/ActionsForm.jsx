@@ -5,7 +5,7 @@ function ActionsForm(){
   let _type = null;
 
   function handleActionSubmission(event) {
-    console.log(_type);
+    console.log(_type.value());
     _type = '';
   }
 
