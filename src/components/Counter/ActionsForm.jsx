@@ -1,9 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import constants from './../../constants';
+
+const { levelData } = constants;
 
 function ActionsForm(props){
+  console.log(levelData)
   const userLevel = props.userLevel;
-  const levelData = props.levelData;
   const customer = props.customerCount;
   let _type = null;
 
