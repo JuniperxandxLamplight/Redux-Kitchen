@@ -1,7 +1,14 @@
 import React from 'react';
+import { dayToggle } from '../../actions';
 
-function ReducersForm(){
 
+function ReducersForm(props){
+  function handleReducersSubmit(e) {
+    e.preventDefault();
+    if (_type.value === levelData[userLevel].answersNight[0] && _input1.value === levelData[userLevel].answersNight[1] && _input2.value === levelData[userLevel].answersNight[2]){
+      props.dispatch(dayToggle());
+    } else {}
+  }
 
 
   return(

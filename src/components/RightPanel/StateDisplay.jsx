@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 
 function StateDisplay(props) {
-  console.log(props.servedFood)
 
   return(
     <div className='state-display'>

@@ -6,12 +6,9 @@ import constants from './../../constants';
 const { levelData } = constants;
 
 function ActionsForm(props){
-  const {dispatch} = props;
   const userLevel = props.userLevel;
   const customer = props.customerCount;
   let _type = null;
-  console.log(levelData[userLevel].answersDay[(customer - 1)])
-
 
   function handleActionSubmission(e) {
     e.preventDefault();
@@ -27,7 +24,6 @@ function ActionsForm(props){
         props.dispatch(nextCustomer());
         props.dispatch(userStateChange(levelData[userLevel].answersDay[(customer - 1)]))
       }
-      console.log(customer);
     } else {
       // Do some animation
       console.log("NOOOOOOO!")
