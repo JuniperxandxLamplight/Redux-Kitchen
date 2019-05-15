@@ -24,11 +24,11 @@ function App() {
         }
         `}</style>
       <Header/>
+      <Route path='/glossary' component={Glossary} />
 
       <Switch>
           <Route exact path='/' component={Welcome} />
           <Route path='/game' component={MainGame} />
-          <Route path='/glossary' component={Glossary} />
           <Route component={Error404} />
       </Switch>
     </div>

@@ -1,6 +1,8 @@
 import React from 'react';
 import Logo from './Logo';
 import styles from './styles';
+import { Link } from 'react-router-dom';
+
 
 function Header(){
   return(
@@ -26,16 +28,32 @@ function Header(){
         }
         .right{
           grid-column: 4/5;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: flex-start;
         }
-        .logo {
+
+        a, a:visited {
+          margin-right: 1rem;
+          color: #000;
+          text-decoration: none;
         }
+        .links {
+          place-self: center;
+        }
+
         `}
       </style>
       <div className='left'></div>
       <div className='center'>
           <Logo/>
       </div>
-      <div className='right'></div>
+      <div className='right'>
+        <div className='links'>
+          <a href="#">Glossary</a>
+          <Link to="/game">Restart</Link>
+        </div>
+      </div>
     </div>
   );
 }
