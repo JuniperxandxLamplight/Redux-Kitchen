@@ -7,11 +7,11 @@ function ButterButton() {
     <Link to='/game'>
       <img
         style={styles}
-        src={require("./../../../assets/images/butterButton.png")}
-        />
+        src={require('./../../../assets/images/butterButton.png')}
+      />
     </Link>
 
-  )
+  );
 }
 
 export default ButterButton;

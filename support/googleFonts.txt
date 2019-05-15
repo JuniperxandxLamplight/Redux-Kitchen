@@ -1,0 +1,7 @@
+font-family: 'Archivo', sans-serif; 
+font-family: 'Archivo Black', sans-serif;
+font-family: 'Roboto Mono', monospace;
+
+
+Archive weights: Regular, Bold
+No italic

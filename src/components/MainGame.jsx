@@ -1,21 +1,33 @@
 import React from 'react';
+
 import CodeEditor from './CodeEditor';
+import InstructionsDisplay from './LeftPanel/InstructionsDisplay';
+import StateContainer from './RightPanel/StateContainer';
+import CounterContainer from './Counter/CounterContainer';
+import WindowContainer from './Window/WindowContainer';
+
 
 function MainGame() {
   return(
     <div className='structure'>
-      <p>I am Main Container</p>
-      <div className='left'>Left column</div>
-      <div className='window'>Window</div>
-      <div className='right'>Right column</div>
-      <div className='counter'>
-        <CodeEditor/>
+      <div className='left'>
+        <InstructionsDisplay/>
       </div>
+      <div className='right'>
+        <StateContainer/>
+      </div>
+      <div className='counter'>
+        <CounterContainer/>
+      </div>
+      <div className='window'>
+        <WindowContainer/>
+      </div>
+    </div>
 
       <style jsx>{`
         .structure{
           width: 100%;
-          height: 89vh;
+          height: 93vh;
           display: grid;
           grid-template-rows: repeat(3, 1fr);
           grid-template-columns: repeat(4, 1fr);
@@ -28,6 +40,7 @@ function MainGame() {
           background-color: #C7AA71;
         }
         .window{
+          z-index: -3;
           grid-row: 1/3;
           grid-column: 2/4;
           background-color: #8CB490;

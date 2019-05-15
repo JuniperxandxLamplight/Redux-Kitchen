@@ -2,13 +2,11 @@ import constants from './../constants';
 
 const { initialState, types } = constants;
 
-const dayToggleReducer = (state = initialState.dayTime, action) => {
+const levelDataReducer = (state = initialState.levelData, action) => {
   switch(action.type) {
-  case types.DAY_TOGGLE: 
-    return !state;
   default: 
     return state;
   }
 };
 
-export default dayToggleReducer;
+export default levelDataReducer;
