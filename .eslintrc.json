@@ -28,7 +28,6 @@
     "react/no-multi-comp": 2,
     "react/jsx-pascal-case": 2,
     "react/prop-types": 2,
-    "react/forbid-prop-types": 1,
     "react/default-props-match-prop-types": [
       "error",
       { "allowRequiredDefaults": false }

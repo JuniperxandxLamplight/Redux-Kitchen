@@ -16,7 +16,7 @@ function ActionsForm(){
           type :
           <input placeholder="action type"></input>
         </p>
-        <p>{"}"}</p>
+        <p>{'}'}</p>
         <button type="submit">Dispatch</button>
       </form>
       <style jsx>{`

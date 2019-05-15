@@ -5,10 +5,10 @@ function StateSlice(props) {
     <div>
       <h3>{props.slice.id}</h3>
       <p>State =  <br/>
-      <span></span>
+        <span></span>
       </p>
     </div>
-  )
+  );
 }
 
 export default StateSlice;

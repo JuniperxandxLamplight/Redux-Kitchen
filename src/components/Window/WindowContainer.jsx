@@ -26,7 +26,7 @@ function WindowContainer() {
         }
       `}</style>
     </div>
-  )
+  );
 }
 
 export default WindowContainer;

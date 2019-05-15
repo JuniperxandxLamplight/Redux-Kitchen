@@ -8,7 +8,7 @@ function CounterContainer() {
       <ActionsForm/>
       <ReducersForm/>
     </div>
-  )
+  );
 }
 
 export default CounterContainer;
