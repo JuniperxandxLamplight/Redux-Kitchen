@@ -15,4 +15,5 @@ export const initialState = {
   userLevel: 1,
   dayTime: true,
   customerCount: 1
+
 };

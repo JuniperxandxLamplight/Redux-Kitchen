@@ -13,8 +13,7 @@ function StateContainer(props) {
       <style jsx>{`
         .main {
           background-color: #C7AA71;
-          //this width can go away when the grid happens
-          width: 280px;
+          width: 100%;
         }
       `}</style>
     </div>

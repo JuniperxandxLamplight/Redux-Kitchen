@@ -1,6 +1,14 @@
 import React from 'react';
 
 function ActionsForm(){
+
+  let _type = null;
+
+  function handleActionSubmission(event) {
+    console.log(_type);
+    _type = '';
+  }
+
   return(
     <div className="container">
       <div className='numbersBox'>
@@ -10,11 +18,11 @@ function ActionsForm(){
         <p>4</p>
         <p>5</p>
       </div>
-      <form>
+      <form onSubmit={handleActionSubmission}>
         <p>action = {'{'}</p>
         <p>
           type :
-          <input placeholder="action type"></input>
+          <input type='text' placeholder="action type" ref={(input) => {_type = input;}}/>
         </p>
         <p>{'}'}</p>
         <button type="submit">Dispatch</button>
