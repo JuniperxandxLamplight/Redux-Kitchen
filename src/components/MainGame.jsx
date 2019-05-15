@@ -7,7 +7,9 @@ function MainGame() {
   return(
     <div className='structure'>
       <div className='left'>Left column</div>
-      <div className='window'>Window</div>
+      <div className='window'>
+        <WindowContainer/>
+      </div>
       <div className='right'>Right column</div>
       <div className='counter'><CounterContainer /></div>
 
