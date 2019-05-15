@@ -8,6 +8,7 @@ import WindowContainer from './Window/WindowContainer';
 
 function MainGame() {
   return(
+
     <div className='structure'>
       <div className='left'>
         <InstructionsDisplay/>
