@@ -1,14 +1,43 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import ActionsForm from './ActionsForm';
 import ReducersForm from './ReducersForm';
 
-function CounterContainer() {
+
+function CounterContainer(props) {
+
+  let shownForm;
+  if (props.state.dayTime){
+    shownForm = <ActionsForm />;
+  } else {
+    shownForm = <ReducersForm />;
+  }
+
   return (
-    <div>I'm the counter!
+    <div className='counter-container'>
+      <ReducersForm/>
+
+      <style jsx>{`
+        .counter-container{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      `}</style>
     </div>
   );
 }
 
-// <ActionsForm/>
-// <ReducersForm/>
-export default CounterContainer;
+{/* <ActionsForm />
+<ReducersForm/> */}
+
+const mapStateToProps = state => {
+  return {
+    state: state,
+  };
+};
+
+export default connect(mapStateToProps)(CounterContainer);
