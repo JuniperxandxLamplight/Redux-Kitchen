@@ -4,6 +4,6 @@ const styles = {
   backgroundColor : "#B6765A",
   display : "flex",
   justifyContent : "center"
-}
+};
 
 export default styles;

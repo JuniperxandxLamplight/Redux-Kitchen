@@ -2,6 +2,7 @@ import React from 'react';
 import InstructionsDisplay from './LeftPanel/InstructionsDisplay';
 import StateContainer from './RightPanel/StateContainer';
 import CounterContainer from './Counter/CounterContainer';
+import WindowContainer from './Window/WindowContainer';
 
 function MainGame() {
   return(
@@ -9,14 +10,14 @@ function MainGame() {
       <div className='left'>
         <InstructionsDisplay/>
       </div>
-      <div className='window'>
-        Window
-      </div>
       <div className='right'>
         <StateContainer/>
       </div>
       <div className='counter'>
         <CounterContainer/>
+      </div>
+      <div className='window'>
+        <WindowContainer/>
       </div>
 
       <style jsx>{`

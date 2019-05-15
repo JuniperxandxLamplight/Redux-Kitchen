@@ -1,6 +1,9 @@
 import React from 'react';
 
 function ReducersForm(){
+
+
+
   return(
     <div className="container">
       <div className='numbersBox'>
@@ -23,14 +26,14 @@ function ReducersForm(){
         <p>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"case "}
           <input placeholder="action type"></input>
-          {":"}
+          {':'}
         </p>
         <p>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"return {"}
           <input placeholder="state slice"></input>
-          {":"}
+          {':'}
           <input placeholder="state slice"></input>
-          {" + 1}"}
+          {' + 1}'}
         </p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;{"}"}</p>
         <p>{"}"}</p>

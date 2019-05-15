@@ -4,17 +4,17 @@ import ButterButton from './../ButterButton';
 
 function WelcomeWaffle() {
   return (
-    <div style={{position: "relative"}}>
+    <div style={{position: 'relative'}}>
       <img
         style={imageStyles}
-        src={require("./../../../assets/images/welcomeWaffle.png")}
+        src={require('./../../../assets/images/welcomeWaffle.png')}
       />
-    <div style={butterStyles}>
+      <div style={butterStyles}>
         <ButterButton/>
       </div>
     </div>
 
-  )
+  );
 }
 
 export default WelcomeWaffle;

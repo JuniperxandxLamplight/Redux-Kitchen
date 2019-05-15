@@ -6,7 +6,7 @@ function WelcomeMessage() {
     <div style={styles}>
       Hello from WelcomeMessage Component
     </div>
-  )
+  );
 }
 
 export default WelcomeMessage;

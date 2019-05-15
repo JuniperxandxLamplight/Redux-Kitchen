@@ -1,7 +1,7 @@
 export const imageStyles = {
   height : '100%',
   width: '100%'
-}
+};
 
 export const butterStyles = {
   position: 'absolute',
@@ -10,5 +10,6 @@ export const butterStyles = {
   transform: 'translate(-50%, -50%)',
   textAlign: 'center',
 
-  maxWidth: "15%"
+  maxWidth: "15%",
+  minWidth: "100px"
 }

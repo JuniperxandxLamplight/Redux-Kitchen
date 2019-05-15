@@ -5,9 +5,9 @@ function Waffle() {
   return (
     <img
       style={styles}
-      src={require("../../assets/images/waffle.png")}
-      />
-  )
-};
+      src={require('../../assets/images/waffle.png')}
+    />
+  );
+}
 
 export default Waffle;

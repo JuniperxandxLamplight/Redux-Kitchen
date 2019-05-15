@@ -1,12 +1,10 @@
 import React from 'react';
-import Header from './Header';
 import { Switch, Route } from 'react-router-dom';
 import MainGame from './MainGame';
+import Header from './Header';
 import Welcome from './Welcome';
 import Glossary from './Glossary';
 import Error404 from './Error404';
-
-
 
 function App() {
   return (
@@ -18,15 +16,20 @@ function App() {
           box-sizing: border-box;
           font-family: Arial, sans-serif;
         }
+
+        body {
+          font-family: 'Archivo', sans-serif;
+          font-size: 16px;
+        }
         `}</style>
       <Header/>
+      <Route path='/glossary' component={Glossary} />
+
       <Switch>
-        <Route exact path='/' component={Welcome} />
-        <Route path='/game' component={MainGame} />
-        <Route path='/glossary' component={Glossary} />
-        <Route component={Error404} />
+          <Route exact path='/' component={Welcome} />
+          <Route path='/game' component={MainGame} />
+          <Route component={Error404} />
       </Switch>
-      
     </div>
 
   );
