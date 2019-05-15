@@ -1,5 +1,4 @@
 import React from 'react';
-import CodeEditor from './CodeEditor';
 import InstructionsDisplay from './LeftPanel/InstructionsDisplay';
 import StateContainer from './RightPanel/StateContainer';
 import CounterContainer from './Counter/CounterContainer';
