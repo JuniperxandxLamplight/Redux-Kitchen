@@ -1,17 +1,32 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import {connect} from 'react-redux';
 import { nextCustomer, userStateChange, dayToggle } from './../../actions';
+>>>>>>> master
 import constants from './../../constants';
-
-const { levelData } = constants;
+const {levels} = constants;
+import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+import Line from './Line'
 
 function ActionsForm(props){
+<<<<<<< HEAD
+=======
   const {dispatch} = props;
+>>>>>>> master
   const userLevel = props.userLevel;
   const customer = props.customerCount;
   let _type = null;
   console.log(levelData[userLevel].answersDay[(customer - 1)])
 
+<<<<<<< HEAD
+  function handleActionSubmission(event) {
+    console.log(_type.value);
+    console.log(levels[userLevel])
+    if (_type.value === levels[userLevel].answersDay[(customer - 1)]){
+      console.log("yes")
+=======
 
   function handleActionSubmission(e) {
     e.preventDefault();
@@ -28,6 +43,7 @@ function ActionsForm(props){
         props.dispatch(userStateChange(levelData[userLevel].answersDay[(customer - 1)]))
       }
       console.log(customer);
+>>>>>>> master
     } else {
       // Do some animation
       console.log("NOOOOOOO!")
@@ -38,47 +54,40 @@ function ActionsForm(props){
 
   return(
     <div className="container">
-      <div className='numbersBox'>
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
-        <p>4</p>
-        <p>5</p>
-      </div>
       <form onSubmit={handleActionSubmission}>
-        <p>action = {'{'}</p>
-        <p>
-          type :
-          <input type='text' id='type' placeholder="action type" ref={(input) => {_type = input;}}/>
-        </p>
-        <p>{'}'}</p>
-        <button type="submit">Dispatch</button>
+        {
+          levels[userLevel].promptDay.map(function(lineText, index){
+            return <Line text={lineText} key={index}/>
+          })
+        }
       </form>
-      <style jsx>{`
-        .container{
-          display: flex;
-        }
-        input{
-          display: inline;
-        }
-        .numbersBox{
-          text-align: center;
-          padding: 5px;
-          background-color: #D1AF6E;
-        }
-        form{
-          padding: 5px 70px 5px 15px;
-          background-color: #C4C4C4;
-        }
-        button{
-          margin-left: 30%;
-          padding: 3px 15px;
-          border: none;
-          border-radius: 5px;
-          background-color: red;
-          cursor: pointer;
-        }
-      `}</style>
+
+      //Syles for original action form
+      // <style jsx>{`
+      //   .container{
+      //     display: flex;
+      //   }
+      //   input{
+      //     display: inline;
+      //   }
+      //   .numbersBox{
+      //     text-align: center;
+      //     padding: 5px;
+      //     background-color: #D1AF6E;
+      //   }
+      //   form{
+      //     padding: 5px 70px 5px 15px;
+      //     background-color: #C4C4C4;
+      //   }
+      //   button{
+      //     margin-left: 30%;
+      //     padding: 3px 15px;
+      //     border: none;
+      //     border-radius: 5px;
+      //     background-color: red;
+      //     cursor: pointer;
+      //   }
+      // `}</style>
     </div>
   );
 }
@@ -86,7 +95,6 @@ function ActionsForm(props){
 const mapStateToProps = state => {
   return {
     userLevel: state.userLevel,
-    levelData: state.levelData,
     customerCount: state.customerCount,
   }
 }
