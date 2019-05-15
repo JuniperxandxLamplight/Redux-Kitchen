@@ -15,6 +15,14 @@ function Customer(){
         };
         img{
           height: 100%;
+        };
+        @media only screen and (min-width: 1450px){
+          margin-top: 5%;
+        };
+        @media only screen and (max-width: 1030px){
+          img{
+            height: 60%;
+          }
         }
       `}</style>
     </div>
