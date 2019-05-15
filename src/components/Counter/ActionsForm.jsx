@@ -1,12 +1,22 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
-function ActionsForm(){
-
+function ActionsForm(props){
+  const userLevel = props.userLevel;
+  const levelData = props.levelData;
+  const customer = props.customerCount;
   let _type = null;
 
   function handleActionSubmission(event) {
-    console.log(_type.value());
-    _type = '';
+    console.log(_type.value);
+    console.log(levelData[userLevel])
+    if (_type.value === levelData[userLevel].answersDay[(customer - 1)]){
+      console.log("yes")
+    } else {
+      console.log("NOOOOOOO!")
+    }
+
+    _type.value = '';
   }
 
   return(
@@ -22,7 +32,7 @@ function ActionsForm(){
         <p>action = {'{'}</p>
         <p>
           type :
-          <input type='text' placeholder="action type" ref={(input) => {_type = input;}}/>
+          <input type='text' id='type' placeholder="action type" ref={(input) => {_type = input;}}/>
         </p>
         <p>{'}'}</p>
         <button type="submit">Dispatch</button>
@@ -58,4 +68,12 @@ function ActionsForm(){
   );
 }
 
-export default ActionsForm;
+const mapStateToProps = state => {
+  return {
+    userLevel: state.userLevel,
+    levelData: state.levelData,
+    customerCount: state.customerCount,
+  }
+}
+
+export default connect(mapStateToProps)(ActionsForm);
