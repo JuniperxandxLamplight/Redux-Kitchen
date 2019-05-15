@@ -9,6 +9,7 @@ import WindowContainer from './Window/WindowContainer';
 
 function MainGame() {
   return(
+
     <div className='structure'>
       <div className='left'>
         <InstructionsDisplay/>
@@ -22,7 +23,6 @@ function MainGame() {
       <div className='window'>
         <WindowContainer/>
       </div>
-    </div>
 
       <style jsx>{`
         .structure{

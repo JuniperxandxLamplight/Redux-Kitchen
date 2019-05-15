@@ -1,21 +1,36 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import { nextCustomer, userStateChange } from './../../actions';
 import constants from './../../constants';
 
 const { levelData } = constants;
 
 function ActionsForm(props){
-  console.log(levelData)
+  const {dispatch} = props;
   const userLevel = props.userLevel;
   const customer = props.customerCount;
   let _type = null;
+  console.log(levelData[userLevel].answersDay[(customer - 1)])
 
-  function handleActionSubmission(event) {
+
+  function handleActionSubmission(e) {
+    e.preventDefault();
     console.log(_type.value);
     console.log(levelData[userLevel])
+    // check for correct answer
     if (_type.value === levelData[userLevel].answersDay[(customer - 1)]){
-      console.log("yes")
+      // check for customer count
+      if (customer >= 3) {
+        // toggle to night and reset cutomercount to 1
+        props.dispatch(dayToggle());
+      } else {
+        // go to the next customer
+        props.dispatch(nextCustomer());
+        props.dispatch(userStateChange(levelData[userLevel].answersDay[(customer - 1)]))
+      }
+      console.log(customer);
     } else {
+      // Do some animation
       console.log("NOOOOOOO!")
     }
 
