@@ -33,6 +33,9 @@ function ActionsForm(){
         };
         input{
           display: inline;
+          margin: 0 3px;
+          padding: 2px 5px;
+          border: none;
         };
         .numbersBox{
           text-align: center;

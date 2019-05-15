@@ -1,12 +1,10 @@
 import React from 'react';
-import Header from './Header';
 import { Switch, Route } from 'react-router-dom';
 import MainGame from './MainGame';
+import Header from './Header';
 import Welcome from './Welcome';
 import Glossary from './Glossary';
 import Error404 from './Error404';
-
-
 
 function App() {
   return (
