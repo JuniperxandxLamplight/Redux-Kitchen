@@ -15,7 +15,7 @@ function CounterContainer(props) {
 
   return (
     <div className='counter-container'>
-      <ReducersForm/>
+      {shownForm}
 
       <style jsx>{`
         .counter-container{

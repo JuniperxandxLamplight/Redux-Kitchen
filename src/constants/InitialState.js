@@ -12,7 +12,7 @@ export const initialState = {
     }
   },
 
-  userLevel: 2,
+  userLevel: 1,
   dayTime: true,
   customerCount: 1,
 
@@ -21,7 +21,7 @@ export const initialState = {
       dayInstructions: '',
       nightInstructions: '',
       answersDay: ["COOK_WAFFLES", "COOK_WAFFLES", "COOK_WAFFLES"],
-      answersNight: ["COOK_BUSCUITS", "biscuits", "biscuits"],
+      answersNight: ["COOK_BISCUITS", "biscuits", "biscuits"],
     },
     2: {
       dayInstructions: '',

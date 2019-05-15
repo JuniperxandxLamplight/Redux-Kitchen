@@ -1,9 +1,11 @@
 import React from 'react';
+import {connect} from 'react-redux';
+
 import constants from './../../constants';
 const {levels} = constants;
 
 import Line from './Line';
-import {connect} from 'react-redux';
+
 function CodeEditor(props) {
   return (
     <div>

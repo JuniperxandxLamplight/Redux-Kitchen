@@ -16,7 +16,7 @@ function MainGame() {
         <StateContainer/>
       </div>
       <div className='counter'>
-        <CodeEditor/>
+        <CounterContainer/>
       </div>
       <div className='window'>
         <WindowContainer/>

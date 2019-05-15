@@ -4,13 +4,15 @@ export const levelData = {
     nightInstructions: '',
     answersDay: ["COOK_WAFFLES", "COOK_WAFFLES", "COOK_WAFFLES"],
     answersNight: ["COOK_BUSCUITS", "biscuits", "biscuits"],
-    editorText : ["var action = {", "&ensp;type : <input type=text></input>", "}"]
+    promptDay : ["var action = {", "&ensp;type : <input type=text></input>", "}"],
+    promptNight : ["function waffleStation(state = initialState, action){" , "&ensp;switch(action.type){" , "&ensp;&ensp;case 'COOK_WAFFLE:'" , "&ensp;&ensp;&ensp;return{cookedWaffles:cookedWaffles +1};", "&ensp;&ensp;case <input type=text></input>:" , "return{<input type=text></input> : <input type=text></input> +1};", "&ensp;}", "}"]
   },
   2: {
     dayInstructions: '',
     nightInstructions: '',
     answersDay: ["COOK_WAFFLES"],
     answersNight: [],
-    editorText : ["function waffleStation(state = initialState, action){" , "&ensp;switch(action.type){" , "&ensp;&ensp;case 'COOK_WAFFLE:'" , "&ensp;&ensp;&ensp;return{cookedWaffles:cookedWaffles +1};", "&ensp;&ensp;case <input type=text></input>:" , "return{<input type=text></input> : <input type=text></input> +1};", "&ensp;}", "}"]
+    promptDay : ["function waffleStation(state = initialState, action){" , "&ensp;switch(action.type){" , "&ensp;&ensp;case 'COOK_WAFFLE:'" , "&ensp;&ensp;&ensp;return{cookedWaffles:cookedWaffles +1};", "&ensp;&ensp;case <input type=text></input>:" , "return{<input type=text></input> : <input type=text></input> +1};", "&ensp;}", "}"],
+    promptNight : ["&ensp;&ensp;case 'COOK_WAFFLE:'" , "&ensp;&ensp;&ensp;return{cookedWaffles:cookedWaffles +1};", "&ensp;&ensp;case <input type=text></input>:" , "return{<input type=text></input> : <input type=text></input> +1};", "&ensp;}", "}"]
   }
 }
