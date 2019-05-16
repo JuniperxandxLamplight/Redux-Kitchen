@@ -1,30 +1,48 @@
 import React from 'react';
-import { dayToggle } from '../../actions';
+import { dayToggle, levelUp } from '../../actions';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import constants from './../../constants';
-import Line from './Line';
-import {formStyles, lineStyles, spanStyles, buttonStyles} from './formStyles';
+import ReactHtmlParser from 'react-html-parser';
 const {levels} = constants;
 
 
-function ReducersForm(props){
-  function handleReducersSubmit(e) {
+class ReducersForm extends React.Component{
+  handleReducersSubmit(e) {
     e.preventDefault();
-    if (_type.value === levelData[userLevel].answersNight[0] && _input1.value === levelData[userLevel].answersNight[1] && _input2.value === levelData[userLevel].answersNight[2]){
-      props.dispatch(dayToggle());
-    } else {}
+    let answerIsTrue = [];
+    let userInputs = [...Object.keys(this.refs)]
+    let answers = levels[this.props.userLevel].answersNight;
+    for (let i=0; i < answers.length; i++) {
+      if(this.refs[userInputs[i]].value === answers[i]) {
+        answerIsTrue.push(true)
+      } else {
+        answerIsTrue.push(false)
+      }
+    }
+    answerIsTrue = answerIsTrue.every((bool)=>(bool===true))
+    console.log(answerIsTrue)
+    if (answerIsTrue) {
+      this.props.dispatch(dayToggle());
+      this.props.dispatch(levelUp());
+    }
   }
 
-  return(
-    <div className="reducerForm">
-      {
-        levels[props.level].promptNight.map(function(lineText, index) {
-          return <Line text={lineText} key={index}/>
-        })
-      }
-    </div>
-  );
+
+  render() {
+    return(
+      <div className="reducerForm">
+        <form onSubmit={this.handleReducersSubmit.bind(this)}>
+        {
+          levels[this.props.userLevel].promptNight.map(function(lineText, index){
+            return <div key={index}>{ReactHtmlParser(lineText)}</div>
+          })
+        }
+        <button type='submit'>Update Reducer</button>
+      </form>
+      </div>
+    );
+  }
 }
 
 ReducersForm.propTypes = {
@@ -32,7 +50,8 @@ ReducersForm.propTypes = {
 }
 
 const mapStateToProps = (state) => ({
-  level : state.userLevel
+  userLevel: state.userLevel,
+  customerCount: state.customerCount,
 });
 
 export default connect(mapStateToProps)(ReducersForm);
