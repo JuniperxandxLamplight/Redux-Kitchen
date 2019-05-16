@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import Line from './Line';
 import ReactHtmlParser from 'react-html-parser';
+import {formStyles, lineStyles, spanStyles, buttonStyles} from './formStyles';
 
 class ActionsForm extends React.Component {
   handleActionSubmission(e) {
@@ -35,18 +36,18 @@ class ActionsForm extends React.Component {
   }
 render(){
   return(
-    <div className="container">
-      <form onSubmit={this.handleActionSubmission.bind(this)}>
+      <form
+        style={formStyles}
+        onSubmit={this.handleActionSubmission.bind(this)}>
         {
           levels[this.props.userLevel].promptDay.map(function(lineText, index){
-            return <div key={index}>{ReactHtmlParser(lineText)}</div>
+            return <div key={index} style={lineStyles}><span style={spanStyles}>{index + 1}</span>{ReactHtmlParser(lineText)}</div>
           })
         }
-        <button type='submit'>Dispatch</button>
+        <div style={{textAlign: "center"}}>
+          <button style={buttonStyles} type='submit'>Dispatch</button>
+        </div>
       </form>
-
-
-    </div>
   );
 }}
 
