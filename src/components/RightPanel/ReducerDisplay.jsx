@@ -49,6 +49,8 @@ class ReducerDisplay extends React.Component {
           }
           .reducerText{
             text-align: left;
+            font-family: Roboto Mono;
+            margin-top: 7%;
           }
           ::-webkit-scrollbar{
             width: 10px;
@@ -97,7 +99,7 @@ class ReducerDisplay extends React.Component {
             align-items: center;
           }
           .robotChef{
-            width: 35%;
+            width: 25%;
           }
           h1 {
             font-family: 'Archivo Black', sans-serif;
@@ -113,7 +115,7 @@ class ReducerDisplay extends React.Component {
             border: 4px solid #76674B;
             background-color: #FBD961;
             width: 90%;
-            height: 130px;
+            height: 170px;
             display: flex;
             justify-content: center;
           }
