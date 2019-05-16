@@ -10,13 +10,13 @@ import {formStyles, lineStyles, spanStyles, buttonStyles} from './formStyles';
 class ActionsForm extends React.Component {
   handleActionSubmission(e) {
     e.preventDefault();
-    console.log(this.refs);
-    console.log(this.props.customerCount)
-
+    let quantity;
+    this.refs.input2 ? quantity = this.refs.input2.value : quantity = null;
+    console.log(quantity);
     if (this.refs.input1.value === levels[this.props.userLevel].answersDay[(this.props.customerCount - 1)]){
       if (this.props.customerCount >= 3) {
         this.props.dispatch(dayToggle());
-        this.props.dispatch(userStateChange(levels[this.props.userLevel].answersDay[(this.props.customerCount - 1)]))
+        this.props.dispatch(userStateChange(levels[this.props.userLevel].answersDay[(this.props.customerCount - 1)]), quantity=1)
       } else {
         this.props.dispatch(nextCustomer());
         this.props.dispatch(userStateChange(levels[this.props.userLevel].answersDay[(this.props.customerCount - 1)]))
