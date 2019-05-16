@@ -34,6 +34,9 @@ function StateDisplay(props) {
           margin: 0 auto;
         }
         h1 {
+          font-family: 'Archivo Black', sans-serif;
+          color: #b26949;
+          text-shadow: 1px 1px #000;
           text-align: center;
         }
         .state-code {
