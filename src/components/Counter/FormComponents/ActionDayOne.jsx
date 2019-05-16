@@ -22,7 +22,7 @@ function ActionDayOne(props) {
         <form onSubmit={handleActionSubmission}>
           <p>action = {'{'}</p>
           <p>
-            type :
+            type :&nbsp;
             <input type='text' id='type' placeholder="action type" ref={(input) => {_type = input;}}/>
           </p>
           <p>{'}'}</p>
@@ -40,17 +40,31 @@ function ActionDayOne(props) {
             padding: 5px;
             background-color: #D1AF6E;
           }
+
+          .numbersBox p, form p {
+            font-family: 'Roboto Mono', monospace;
+
+          }
           form{
             padding: 5px 70px 5px 15px;
             background-color: #C4C4C4;
           }
+
+          input {
+            font-size: .9rem;
+          }
+
           button{
             margin-left: 30%;
             padding: 3px 15px;
             border: none;
             border-radius: 5px;
-            background-color: red;
+            background-color: #b23701;
             cursor: pointer;
+            font-size: .9rem;
+            color: #fefefe;
+            font-family: 'Roboto Mono', monospace;
+
           }
         `}</style>
       </div>
@@ -58,3 +72,5 @@ function ActionDayOne(props) {
 }
 
 export default ActionDayOne;
+
+// #d84302

@@ -43,11 +43,13 @@ function Header(props){
         }
         .links {
           place-self: center;
+          padding-left: 1rem;
         }
 
         .linkstyle, .linkstyle:visited {
           margin-right: 1rem;
           color: #000;
+          font-size: 1.2rem;
           text-decoration: none;
           display: inline;
           cursor: pointer;
@@ -61,7 +63,7 @@ function Header(props){
       <div className='right'>
         <div className='links'>
           <div className = 'linkstyle' onClick={props.handleClick}>Glossary</div>
-          <Link to="/game" style={{textDecoration: 'none'}}><h6>Restart</h6></Link>
+          <Link to="/game" style={{textDecoration: 'none'}}><div className = 'linkstyle'>Restart</div></Link>
         </div>
       </div>
     </div>
