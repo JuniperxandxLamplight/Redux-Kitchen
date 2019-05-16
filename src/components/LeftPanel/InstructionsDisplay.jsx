@@ -1,14 +1,24 @@
 import React from 'react';
 import ReducerDisplay from './ReducerDisplay';
+import constants from './../../constants';
+import {connect} from 'react-redux';
 
-function InstructionsDisplay() {
+function InstructionsDisplay(props) {
+
+  let instructions;
+  if (props.state.dayTime){
+    instructions = constants.levels[props.state.userLevel].dayInstructions.split("*>");
+  } else {
+    instructions = [''];
+  }
+
   return(
     <div className='instructions-display'>
       <h1>INSTRUCTIONS</h1>
-      <h3>Day 1 - Start of Day</h3>
-      <p>Your type value tells your reducer what action you’re sending it.
-        <br/><br/>If you look at your current reducer, the only action type they can take right now is COOK_WAFFLE. Try dispatching it an action with that type!
-        <br/><br/>Note: Your reducers are written with switch statements. If you’re not familliar with them, check out this link: (mdn link)</p>
+      <h3>Day {props.state.userLevel}</h3>
+      {instructions.map((paragraph, index) => {
+        return <p key={index}>{paragraph}</p>
+      })}
 
       <ReducerDisplay/>
 
@@ -23,10 +33,17 @@ function InstructionsDisplay() {
         }
         p{
           text-align: left;
+          margin-top: 15px;
         }
       `}</style>
     </div>
   );
 }
 
-export default InstructionsDisplay;
+const mapStateToProps = state => {
+  return{
+    state: state
+  }
+}
+
+export default connect(mapStateToProps)(InstructionsDisplay);

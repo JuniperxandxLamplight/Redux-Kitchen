@@ -14,6 +14,7 @@ function Customer(){
           height: 100%;
         };
         img{
+          z-index: -3;
           height: 100%;
         };
         @media only screen and (min-width: 1450px){

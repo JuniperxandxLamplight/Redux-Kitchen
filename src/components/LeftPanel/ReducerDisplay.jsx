@@ -1,5 +1,5 @@
 import React from 'react';
-import robotChef from './../../assets/images/robotChef.png';
+import robotChef from './../../assets/images/robot2.png';
 
 class ReducerDisplay extends React.Component {
   constructor(){
@@ -12,9 +12,10 @@ class ReducerDisplay extends React.Component {
     this.handleShowReducer = this.handleShowReducer.bind(this);
 
     this.toolTipInstance = (
-      <div onClick={this.handleHideReducer}>
+      <div>
         <div className='infoBox'>
-          <p>Reducer info goes here. Click to hide.</p>
+        <h2 onClick={this.handleHideReducer}>[X]</h2>
+          <p>Reducer info goes here. Click X to hide.</p>
 
             <style jsx>{`
               .infoBox{
@@ -23,17 +24,22 @@ class ReducerDisplay extends React.Component {
                 padding: 3%;
                 text-align: left;
               }
+              h2{
+                text-align: right;
+                margin-bottom: 3%;
+                cursor: pointer;
+              }
             `}</style>
         </div>
       </div>
     );
   }
 
-  handleHideReducer(event) {
+  handleHideReducer() {
     this.setState({hideToolTip: true});
     console.log('clicked')
   }
-  handleShowReducer(event) {
+  handleShowReducer() {
     this.setState({hideToolTip: false});
     console.log('clicked')
   }
@@ -46,7 +52,6 @@ class ReducerDisplay extends React.Component {
     return(
       <div className='reducer-display'>
         <h1>REDUCERS</h1>
-        <p>(Click on Robot Chef for Reducer references)</p>
         <img onClick={this.handleShowReducer} className="robotChef" src={robotChef} alt="Robot Chef" style={reducerStyleShow}/>
         <div className='robot-container' style={reducerStyleHide}>
           {this.toolTipInstance}
@@ -59,7 +64,7 @@ class ReducerDisplay extends React.Component {
           }
           img{
             height: auto;
-            width: 80%;
+            width: 60%;
             cursor: pointer;
           }
           .robot-container{
@@ -67,7 +72,6 @@ class ReducerDisplay extends React.Component {
             background-color: #FBD961;
             display: flex;
             justify-content: center;
-            cursor: pointer;
           }
         `}</style>
       </div>

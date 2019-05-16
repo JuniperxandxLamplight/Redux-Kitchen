@@ -7,15 +7,11 @@ import ReducersForm from './ReducersForm';
 function CounterContainer(props) {
 
   let shownForm;
-  if (props.state.dayTime){
-    shownForm = <ActionsForm />;
-  } else {
-    shownForm = <ReducersForm />;
-  }
+  props.state.dayTime ? shownForm = <ActionsForm /> : shownForm = <ReducersForm />;
 
   return (
     <div className='counter-container'>
-      <ReducersForm/>
+      {shownForm}
 
       <style jsx>{`
         .counter-container{

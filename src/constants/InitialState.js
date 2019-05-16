@@ -1,14 +1,14 @@
 export const initialState = {
 
   userState: {
-    kitchen: {
-      waffles: 1,
-      strawberryWaffles: 2,
-      biscuits: 2
+    servedFood: {
+      waffles: 0,
+      strawberryWaffles: 0,
+      biscuits: 0
     },
     pantry: {
-      batter: 5,
-      strawberries: 7
+      batter: 10,
+      strawberries: 10
     }
   },
 
@@ -16,18 +16,4 @@ export const initialState = {
   dayTime: true,
   customerCount: 1,
 
-  levelData: {
-    1: {
-      dayInstructions: '',
-      nightInstructions: '',
-      answersDay: ["COOK_WAFFLES", "COOK_WAFFLES", "COOK_WAFFLES"],
-      answersNight: ["COOK_BUSCUITS", "biscuits", "biscuits"],
-    },
-    2: {
-      dayInstructions: '',
-      nightInstructions: '',
-      answersDay: ["COOK_WAFFLES"],
-      answersNight: [],
-    }
-  }
 };
