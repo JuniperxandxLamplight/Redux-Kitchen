@@ -32,7 +32,7 @@ function WindowContainer(props) {
           background-color: #8CB490;
           width: 100%;
           height: 100%;
-        };
+        }
         .customerBox{
           display: grid;
           grid-template: 50% / 2fr 1fr;

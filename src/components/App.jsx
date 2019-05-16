@@ -5,8 +5,7 @@ import Header from './Header';
 import Welcome from './Welcome';
 import Glossary from './Glossary';
 import Error404 from './Error404';
-import { CSSTransitionGroup } from 'react-transition-group'
-
+import { CSSTransitionGroup } from 'react-transition-group';
 
 
 class App  extends React.Component  {
