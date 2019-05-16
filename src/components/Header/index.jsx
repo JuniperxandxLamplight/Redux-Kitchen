@@ -1,17 +1,16 @@
 import React from 'react';
 import Logo from './Logo';
 import styles from './styles';
-import { Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 
 
-function Header(){
+function Header(props){
   return(
     <div className='structure'>
       <style jsx>{`
-        .structure{
+        .structure {
           width: 100%;
-          height: 8vw;
-          max-height: 80px;
+          height: 7vh;
           background: #B6765A;
           display: grid;
           grid-template-columns: repeat(4, 1fr);
@@ -32,7 +31,11 @@ function Header(){
           flex-flow: row nowrap;
           justify-content: flex-start;
         }
-
+        h6{
+          margin-right: 1rem;
+          color: #000;
+          text-decoration: none;
+        }
         a, a:visited {
           margin-right: 1rem;
           color: #000;
@@ -42,6 +45,13 @@ function Header(){
           place-self: center;
         }
 
+        .linkstyle, .linkstyle:visited {
+          margin-right: 1rem;
+          color: #000;
+          text-decoration: none;
+          display: inline;
+          cursor: pointer;
+        }
         `}
       </style>
       <div className='left'></div>
@@ -50,8 +60,8 @@ function Header(){
       </div>
       <div className='right'>
         <div className='links'>
-          <a href="#">Glossary</a>
-          <Link to="/game">Restart</Link>
+          <div className = 'linkstyle' onClick={props.handleClick}>Glossary</div>
+          <Link to="/game" style={{textDecoration: 'none'}}><h6>Restart</h6></Link>
         </div>
       </div>
     </div>
