@@ -91,6 +91,9 @@ function Glossary(props) {
           disc-style: none;
           margin-bottom: 1rem;
         }
+        li {
+          list-style: none;
+        }
 
         .term, .def {
           font-size: .85rem;

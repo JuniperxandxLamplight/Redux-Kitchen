@@ -27,6 +27,7 @@ function StateDisplay(props) {
           display: flex;
           flex-direction: column;
           align-items: center;
+          font-family: Roboto Mono, monospace;
         }
         .display {
           padding: 5px;

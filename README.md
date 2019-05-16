@@ -9,16 +9,13 @@
 #### By _**Aurora Shido-Wagenet, Kim McConnell, Ward Chamberlain, Randee Layosa, Tracy Reith**_
 
 1. [Description](#description)
-2. [Stretch Goals](#stretch-goals)
-3. [Target Audience](#target-audience)
-4. [Component Tree](#component-tree)
-5. [State Shapes](#state-shapes)
-<!--1. [Development Plan](#development-plan)-->
-<!-- 1. [Development Specs](#development-specs) -->
-6. [Installation](#setup-and-installation-requirements)
-<!-- 1. [Known Bugs](#known-bugs) -->
-7. [Design and Development Technologies](#design-and-development-technologies)
-8. [License](#license)
+1. [Stretch Goals](#stretch-goals)
+1. [Target Audience](#target-audience)
+1. [Component Tree](#component-tree)
+1. [State Shapes](#state-shapes)
+1. [Installation](#setup-and-installation-requirements)
+1. [Design and Development Technologies](#design-and-development-technologies)
+1. [License](#license)
 
 ## Description
 

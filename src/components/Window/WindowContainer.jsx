@@ -4,29 +4,32 @@ import Customer from './Customer';
 import Upkeep from './Upkeep';
 import {connect} from 'react-redux';
 
-function WindowContainer(props) {
+function WindowContainer(props){
 
   let custView;
   let speechView;
   let nightView;
 
   if (props.state.dayTime){
-    custView = <Customer/>
-    speechView = <SpeechBubble/>
-    nightView = <div></div>
+      custView = true,
+      speechView = true,
+      nightView = false
   } else {
-    custView = <div></div>
-    speechView = <div></div>
-    nightView = <Upkeep/>
+      custView = false,
+      speechView = false,
+      nightView = true
   }
 
   return (
     <div className="container">
       <div className="customerBox">
-        {custView}
-        {speechView}
+        {custView &&
+        <Customer/>}
+        {speechView &&
+        <SpeechBubble/>}
       </div>
-        {nightView}
+      {nightView &&
+      <Upkeep/>}
       <style  jsx>{`
         .container{
           background-color: #8CB490;
