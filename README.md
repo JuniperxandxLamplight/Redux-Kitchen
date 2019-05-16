@@ -1,3 +1,7 @@
+<p align='center'>
+<img src='src/assets/images/logo.png' width='500px' alt='Redux Kitchen Logo'>
+</p>
+
 # _Redux Kitchen_
 
 #### _A browser game to teach Redux flow and best practices._
@@ -25,15 +29,32 @@ Learners begin the game by taking over the day-to-day operation of a waffle shop
 #### Introduction
 Inherit store
 
+<p align='center'>
+<img src='src/assets/images/splash.jpg' width='300px' alt='splash - Welcome Page'>
+<img src='src/assets/images/splash2.jpg' width='300px' alt='second splash - Story Page'>
+</p>
+
 #### Level 1
 **Day Start:** Dispatch one type of Action; Reducers: Cook Reducer
+<p align='center'>
+<img src='src/assets/images/game-start.jpg' width='300px' alt='Start Page'>
+</p>
 
 **Day End:** Add Switch Case for biscuits
+<p align='center'>
+<img src='src/assets/images/day1end-1.jpg' width='300px' alt='End Day 1 Page'>
+</p>
 
 #### Level 2
 **Day Start:** Goal: Dispatch multiple types of actions; Reducer: Cooked Reducer 2.0
+<p align='center'>
+<img src='src/assets/images/customer-order.jpg' width='300px' alt='Day 2 Customer Order'>
+</p>
 
 **Day End:** Goal: Modify Reducer to accept quantity payload
+<p align='center'>
+<img src='src/assets/images/day1end-2.jpg' width='300px' alt='End Day 2 Page'>
+</p>
 
 #### Level 3
 **Day Start:** Goal: Dispatch actions with payload; Reducer: Cooked Reducer 3.0
@@ -103,8 +124,6 @@ state = {
   customerCount: 1
 }
 ````
-
-## Notes
 
 ## Setup/Installation Requirements
 
