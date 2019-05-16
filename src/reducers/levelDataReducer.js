@@ -1,10 +1,10 @@
 import constants from './../constants';
 
-const { initialState, types } = constants;
+const { initialState, types, levelData } = constants;
 
-const levelDataReducer = (state = initialState.levelData, action) => {
+const levelDataReducer = (state = levelData, action) => {
   switch(action.type) {
-  default: 
+  default:
     return state;
   }
 };

@@ -12,8 +12,8 @@ function SpeechBubble(props){
 
   let items = ['waffle', 'biscuit'];
   let item;
-  if (props.state.userLevel < 1){
-    item = waffle;
+  if (props.state.userLevel < 2){
+    item = 'waffle';
   } else {
     item = items[Math.floor(Math.random()*2)];
   }
