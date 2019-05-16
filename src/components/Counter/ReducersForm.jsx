@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import constants from './../../constants';
 import Line from './Line';
-
+import {formStyles, lineStyles, spanStyles, buttonStyles} from './formStyles';
 const {levels} = constants;
 
 
@@ -15,7 +15,7 @@ function ReducersForm(props){
       props.dispatch(dayToggle());
     } else {}
   }
-  
+
   return(
     <div className="reducerForm">
       {
