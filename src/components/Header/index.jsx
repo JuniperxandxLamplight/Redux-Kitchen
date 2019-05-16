@@ -33,7 +33,7 @@ function Header(props){
           flex-flow: row nowrap;
           justify-content: flex-start;
         }
-        h6{
+        p{
           margin-right: 1rem;
           color: #000;
           text-decoration: none;
@@ -66,6 +66,7 @@ function Header(props){
         <div className='links'>
           <div className = 'linkstyle' onClick={props.handleClick}>Glossary</div>
           <Link to="/game" style={{textDecoration: 'none'}}><div className = 'linkstyle'>Restart</div></Link>
+
         </div>
       </div>
     </div>

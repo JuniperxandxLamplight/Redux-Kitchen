@@ -1,93 +1,49 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import { nextCustomer, userStateChange, dayToggle } from './../../actions';
 import constants from './../../constants';
-import ActionDayOne from './FormComponents/ActionDayOne';
+const {levels} = constants;
+import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+import ReactHtmlParser from 'react-html-parser';
+import {formStyles, lineStyles, spanStyles, buttonStyles} from './formStyles';
 
-const { levels } = constants;
+class ActionsForm extends React.Component {
+  handleActionSubmission(e) {
+    e.preventDefault();
+    console.log(this.refs);
+    console.log(this.props.customerCount)
 
-
-class ActionsForm extends React.Component{
-  constructor(props){
-    super(props);
-    this.userLevel = props.userLevel;
-    this.customer = props.customerCount;
-    this.handleActionSubmission = this.handleActionSubmission.bind(this);
-    
-  }
-  
-
-
-  handleActionSubmission(userAnswer) {
-    
-    // check for correct answer
-    if (userAnswer === levels[this.userLevel].answersDay[(this.customer - 1)]){
-      // check for customer count
-      if (this.customer >= 3) {
-        // toggle to night and reset cutomercount to 1
+    if (this.refs.input1.value === levels[this.props.userLevel].answersDay[(this.props.customerCount - 1)]){
+      if (this.props.customerCount >= 3) {
         this.props.dispatch(dayToggle());
-        this.props.dispatch(userStateChange(levels[this.userLevel].answersDay[(this.customer - 1)]))
+        this.props.dispatch(userStateChange(levels[this.props.userLevel].answersDay[(this.props.customerCount - 1)]))
       } else {
-        // go to the next customer
         this.props.dispatch(nextCustomer());
-        this.props.dispatch(userStateChange(levels[this.userLevel].answersDay[(this.customer - 1)]))
+        this.props.dispatch(userStateChange(levels[this.props.userLevel].answersDay[(this.props.customerCount - 1)]))
       }
     } else {
-      // Do some animation
       console.log("NOOOOOOO!")
     }
+
+    this.refs.input1.value = '';
   }
 
-  render(){
-
-    return(
-      <ActionDayOne onActionSubmission={this.handleActionSubmission}/>
-    //   <div className="container">
-    //     <div className='numbersBox'>
-    //       <p>1</p>
-    //       <p>2</p>
-    //       <p>3</p>
-    //       <p>4</p>
-    //       <p>5</p>
-    //     </div>
-    //     <form onSubmit={handleActionSubmission}>
-    //       <p>action = {'{'}</p>
-    //       <p>
-    //         type :
-    //         <input type='text' id='type' placeholder="action type" ref={(input) => {_type = input;}}/>
-    //       </p>
-    //       <p>{'}'}</p>
-    //       <button type="submit">Dispatch</button>
-    //     </form>
-    //     <style jsx>{`
-    //       .container{
-    //         display: flex;
-    //       }
-    //       input{
-    //         display: inline;
-    //       }
-    //       .numbersBox{
-    //         text-align: center;
-    //         padding: 5px;
-    //         background-color: #D1AF6E;
-    //       }
-    //       form{
-    //         padding: 5px 70px 5px 15px;
-    //         background-color: #C4C4C4;
-    //       }
-    //       button{
-    //         margin-left: 30%;
-    //         padding: 3px 15px;
-    //         border: none;
-    //         border-radius: 5px;
-    //         background-color: red;
-    //         cursor: pointer;
-    //       }
-    //     `}</style>
-    //   </div>
-    );
-  }
-}
+render(){
+  return(
+      <form
+        style={formStyles}
+        onSubmit={this.handleActionSubmission.bind(this)}>
+        {
+          levels[this.props.userLevel].promptDay.map(function(lineText, index){
+            return <div key={index} style={lineStyles}><span style={spanStyles}>{index + 1}</span>{ReactHtmlParser(lineText)}</div>
+          })
+        }
+        <div style={{textAlign: "center"}}>
+          <button style={buttonStyles} type='submit'>Dispatch</button>
+        </div>
+      </form>
+  );
+}}
 
 
 const mapStateToProps = state => {
@@ -98,4 +54,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(ActionsForm);
-

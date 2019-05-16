@@ -17,6 +17,7 @@
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-html-parser": "^2.0.2",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.0.0",
     "react-transition-group": "^1.2.1",
