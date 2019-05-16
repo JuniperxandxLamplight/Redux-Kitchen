@@ -4,53 +4,58 @@ import constants from './../../constants';
 const {levels} = constants;
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import Line from './Line'
+import Line from './Line';
+import ReactHtmlParser from 'react-html-parser';
 
-function ActionsForm(props){
-  const userLevel = props.userLevel;
-  const customer = props.customerCount;
-  let _type = null;
+class ActionsForm extends React.Component {
+  constructor(props){
+    super(props);
+    this.userLevel = props.userLevel;
+    this.customer = props.customerCount;
+    this._type = null;
+  }
 
-  function handleActionSubmission(e) {
+
+  handleActionSubmission(e) {
     e.preventDefault();
     console.log("here");
     // check for correct answer
-    console.log(_type);
+    console.log(this.refs);
 
-    if (_type.value === levels[userLevel].answersDay[(customer - 1)]){
-      // check for customer count
-      if (customer >= 3) {
+    if (this.refs.input1.value === levels[this.userLevel].answersDay[(this.customer - 1)]){
+      // check for this.customer count
+      if (this.customer >= 3) {
         // toggle to night and reset cutomercount to 1
-        props.dispatch(dayToggle());
-        props.dispatch(userStateChange(levels[userLevel].answersDay[(customer - 1)]))
+        this.props.dispatch(dayToggle());
+        this.props.dispatch(userStateChange(levels[this.userLevel].answersDay[(this.customer - 1)]))
       } else {
-        // go to the next customer
-        props.dispatch(nextCustomer());
-        props.dispatch(userStateChange(levels[userLevel].answersDay[(customer - 1)]))
+        // go to the next this.customer
+        this.props.dispatch(nextCustomer());
+        this.props.dispatch(userStateChange(levels[this.userLevel].answersDay[(this.customer - 1)]))
       }
     } else {
       // Do some animation
       console.log("NOOOOOOO!")
     }
 
-    _type.value = '';
+    this.refs.input1.value = '';
   }
-
+render(){
   return(
     <div className="container">
-      <form onSubmit={handleActionSubmission}>
+      <form onSubmit={this.handleActionSubmission.bind(this)}>
         {
-          levels[userLevel].promptDay.map(function(lineText, index){
-            return <Line text={lineText} key={index}/>
+          levels[this.userLevel].promptDay.map(function(lineText, index){
+            return <div key={index}>{ReactHtmlParser(lineText)}</div>
           })
         }
         <button type='submit'>Dispatch</button>
       </form>
 
-      
+
     </div>
   );
-}
+}}
 
 const mapStateToProps = state => {
   return {
