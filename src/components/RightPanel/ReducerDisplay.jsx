@@ -1,12 +1,13 @@
 import React from 'react';
 import robotChef from './../../assets/images/robot2.png';
 import constants from './../../constants';
+import { connect } from 'react-redux';
 const { levels } = constants;
 import ReactHtmlParser from 'react-html-parser';
 
 class ReducerDisplay extends React.Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state={
       hideToolTip: true
     };
@@ -22,7 +23,7 @@ class ReducerDisplay extends React.Component {
         <div className='reducerText'>
           <div>
             {
-              levels[1].reducerData.map(function(lineText, index){
+              levels[this.props.state.userLevel].reducerData.map(function(lineText, index){
                 return <div key={index}>{ReactHtmlParser(lineText)}</div>
               })
             }
@@ -125,4 +126,11 @@ class ReducerDisplay extends React.Component {
   }
 }
 
-export default ReducerDisplay;
+const mapStateToProps = state => {
+  return {
+    state: state,
+  };
+};
+
+
+export default connect(mapStateToProps)(ReducerDisplay);
