@@ -13,7 +13,10 @@ function ActionsForm(props){
 
   function handleActionSubmission(e) {
     e.preventDefault();
+    console.log("here");
     // check for correct answer
+    console.log(_type);
+
     if (_type.value === levels[userLevel].answersDay[(customer - 1)]){
       // check for customer count
       if (customer >= 3) {
@@ -41,6 +44,7 @@ function ActionsForm(props){
             return <Line text={lineText} key={index}/>
           })
         }
+        <button type='submit'>Dispatch</button>
       </form>
 
       
