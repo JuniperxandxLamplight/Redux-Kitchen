@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import StateDisplay from './StateDisplay';
+import ReducerDisplay from './ReducerDisplay';
 
 function StateContainer(props) {
   const servedFood = props.state.userState.servedFood;
@@ -10,6 +11,8 @@ function StateContainer(props) {
     <div className='state-container'>
       <StateDisplay servedFood={servedFood}
         pantry={pantry} />
+      <ReducerDisplay />
+
       <style jsx>{`
         .state-container {
           margin-top: 15%;

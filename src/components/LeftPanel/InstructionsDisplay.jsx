@@ -1,5 +1,4 @@
 import React from 'react';
-import ReducerDisplay from './ReducerDisplay';
 import constants from './../../constants';
 import {connect} from 'react-redux';
 
@@ -19,8 +18,6 @@ function InstructionsDisplay(props) {
       {instructions.map((paragraph, index) => {
         return <p key={index}>{paragraph}</p>
       })}
-
-      <ReducerDisplay/>
 
       <style jsx>{`
         .instructions-display{
