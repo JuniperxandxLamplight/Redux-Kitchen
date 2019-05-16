@@ -5,7 +5,7 @@ import Header from './Header';
 import Welcome from './Welcome';
 import Glossary from './Glossary';
 import Error404 from './Error404';
-import { CSSTransitionGroup } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
 
 
 class App  extends React.Component  {
@@ -41,19 +41,25 @@ class App  extends React.Component  {
               height: 100%;
             }
             `}</style>
-          <Header
-            handleClick = {this.handleClick}/>
+        <Header
+          handleClick = {this.handleClick}/>
 
-          <Switch>
-            <Route exact path='/' component={Welcome} />
-            <Route path='/game' component={MainGame} />
-            <Route component={Error404} />
-          </Switch>
-          { this.state.visible ? <Glossary handleClick = {this.handleClick} /> : null }
-        </div>
+        <Switch>
+          <Route exact path='/' component={Welcome} />
+          <Route path='/game' component={MainGame} />
+          <Route component={Error404} />
+        </Switch>
+
+          { this.state.visible ? <Glossary visible = {this.state.visible} handleClick = {this.handleClick} /> : null }
+
+      </div>
 
       );
     }
   }
 
   export default App;
+  // this.state = { visible: false };
+  // this.setState({ visible: ! this.state.visible });
+
+  // { this.state.visible ? <Glossary handleClick = {this.handleClick} /> : null }
