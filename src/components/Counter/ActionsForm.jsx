@@ -3,9 +3,20 @@ import {connect} from 'react-redux';
 import { nextCustomer, userStateChange, dayToggle } from './../../actions';
 import constants from './../../constants';
 
-const { levelData } = constants;
+const { levelData, levels } = constants;
+
 
 function ActionsForm(props){
+
+  const form = <form onSubmit={handleActionSubmission}>
+        <p>action = {'{'}</p>
+        <p>&ensp; type : <input type='text' id='type' placeholder='action type' ref={(input) => {_type = input;}}/>
+        </p><p>{'}'}</p>
+        <button type='submit'>Dispatch</button>
+      </form>;
+
+  const forms = levels.action1;
+
   const userLevel = props.userLevel;
   const customer = props.customerCount;
   let _type = null;
@@ -28,7 +39,6 @@ function ActionsForm(props){
       // Do some animation
       console.log("NOOOOOOO!")
     }
-
     _type.value = '';
   }
 
@@ -88,3 +98,5 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(ActionsForm);
+
+
