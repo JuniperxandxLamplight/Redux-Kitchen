@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 
 function Upkeep(props){
 
-  const instructions = constants.levelData[props.state.userLevel].nightInstructions.split("*>");
+  const instructions = constants.levels[props.state.userLevel].nightInstructions.split("*>");
   return(
     <div>
       <img className="waffle" src={waffle} alt="waffle"/>
