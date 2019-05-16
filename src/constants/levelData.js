@@ -5,7 +5,8 @@
     answersDay: ["COOK_WAFFLES", "COOK_WAFFLES", "COOK_WAFFLES"],
     answersNight: ["COOK_BUSCUITS", "biscuits", "biscuits"],
     promptDay : ["var action = {", "&ensp;type : <input type='text' id='type' placeholder='action type' ref='input1' />", "}"],
-    promptNight : ["function waffleStation(state = initialState, action){" , "&ensp;switch(action.type){" , "&ensp;&ensp;case 'COOK_WAFFLE:'" , "&ensp;&ensp;&ensp;return{cookedWaffles:cookedWaffles +1 };", "&ensp;&ensp;case <input type=text></input>:" , "return{<input type=text></input> : <input type=text></input> +1};", "&ensp;}", "}"]
+    promptNight : ["function waffleStation(state = initialState, action){" , "&ensp;switch(action.type){" , "&ensp;&ensp;case 'COOK_WAFFLE:'" , "&ensp;&ensp;&ensp;return{cookedWaffles:cookedWaffles +1 };", "&ensp;&ensp;case <input type=text></input>:" , "return{<input type=text></input> : <input type=text></input> +1};", "&ensp;}", "}"],
+    reducerData: ['function waffleStation(state = initialState, action){ ', '&ensp;&ensp;switch(action.type){', "&ensp;&ensp;&ensp;&ensp;case 'COOK_WAFFLE':", '&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;return{cookedWaffles:cookedWaffles +1};', '&ensp;&ensp;&ensp;&ensp;default:', '&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;return state;']
   },
   2: {
     dayInstructions: 'Make sure to pay attention to what the customer is ordering! *> You\'ll have to dispatch a different action for differrent orders.',

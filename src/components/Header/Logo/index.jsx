@@ -5,7 +5,7 @@ function Logo() {
   return (
     <img
       style={styles}
-      src={require('./../../../assets/images/logo.png')}
+      src={require('./../../../assets/images/logo-fruit.png')}
     />
   );
 }

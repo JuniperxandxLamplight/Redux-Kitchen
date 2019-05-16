@@ -1,5 +1,5 @@
 <p align='center'>
-<img src='src/assets/images/logo.png' width='500px' alt='Redux Kitchen Logo'>
+<img src='src/assets/images/logo-fruit.png' width='500px' alt='Redux Kitchen Logo'>
 </p>
 
 # _Redux Kitchen_

@@ -1,5 +1,8 @@
 import React from 'react';
 import robotChef from './../../assets/images/robot2.png';
+import constants from './../../constants';
+const { levels } = constants;
+import ReactHtmlParser from 'react-html-parser';
 
 class ReducerDisplay extends React.Component {
   constructor(){
@@ -17,26 +20,35 @@ class ReducerDisplay extends React.Component {
           <h2 onClick={this.handleHideReducer}>[X]</h2>
         </div>
         <div className='reducerText'>
-          <p>Reducer info goes here. Click X to hide. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <div>
+            {
+              levels[1].reducerData.map(function(lineText, index){
+                return <div key={index}>{ReactHtmlParser(lineText)}</div>
+              })
+            }
+          </div>
         </div>
 
         <style jsx>{`
           .infoBox{
             width: 100%;
             height: auto;
-            padding: 4%;
+            padding: 1% 4%;
             display: flex;
             flex-direction: column;
             overflow: auto;
           }
           .exit{
             width: 40px;
-            right: 1.5%;
+            right: 3%;
             position: absolute;
             cursor: pointer;
           }
           h2{
-            color: #76674B;
+            color: #C79A43;
+          }
+          .reducerText{
+            text-align: left;
           }
           ::-webkit-scrollbar{
             width: 10px;
@@ -95,7 +107,7 @@ class ReducerDisplay extends React.Component {
           .robot-container{
             border: 4px solid #76674B;
             background-color: #FBD961;
-            width: 60%;
+            width: 90%;
             height: 130px;
             display: flex;
             justify-content: center;
