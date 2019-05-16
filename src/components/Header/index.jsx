@@ -66,7 +66,8 @@ function Header(props){
             <Link to="/game"><div className = 'linkstyle'>Restart</div></Link>
           </div>
         </div>
-    </div>
+      </div>
+    </div>  
 
 
   );
