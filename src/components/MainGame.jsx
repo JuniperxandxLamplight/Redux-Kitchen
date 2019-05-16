@@ -1,5 +1,4 @@
 import React from 'react';
-import CodeEditor from './CodeEditor';
 import InstructionsDisplay from './LeftPanel/InstructionsDisplay';
 import StateContainer from './RightPanel/StateContainer';
 import CounterContainer from './Counter/CounterContainer';
@@ -8,6 +7,7 @@ import WindowContainer from './Window/WindowContainer';
 
 function MainGame() {
   return(
+
     <div className='structure'>
       <div className='left'>
         <InstructionsDisplay/>

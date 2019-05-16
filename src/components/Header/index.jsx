@@ -1,17 +1,17 @@
 import React from 'react';
 import Logo from './Logo';
 import styles from './styles';
-import { Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 
 
-function Header(){
+function Header(props){
+  console.log(props);
   return(
     <div className='structure'>
       <style jsx>{`
-        .structure{
+        .structure {
           width: 100%;
-          height: 8vw;
-          max-height: 80px;
+          height: 7vh;
           background: #B6765A;
           display: grid;
           grid-template-columns: repeat(4, 1fr);
@@ -42,6 +42,13 @@ function Header(){
           place-self: center;
         }
 
+        .linkstyle, .linkstyle:visited {
+          margin-right: 1rem;
+          color: #000;
+          text-decoration: none;
+          display: inline;
+          cursor: pointer;
+        }
         `}
       </style>
       <div className='left'></div>
@@ -53,8 +60,16 @@ function Header(){
           <a href="#">Glossary</a>
           <Link to="/game">Restart</Link>
         </div>
+        <div className='right'>
+          <div className='links'>
+            <div className = 'linkstyle' onClick={props.handleClick}>Glossary</div>
+            <Link to="/game"><div className = 'linkstyle'>Restart</div></Link>
+          </div>
+        </div>
       </div>
-    </div>
+    </div>  
+
+
   );
 }
 
