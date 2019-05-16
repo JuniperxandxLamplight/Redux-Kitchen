@@ -15,6 +15,8 @@ function Header(props){
           display: grid;
           grid-template-columns: repeat(4, 1fr);
         }
+
+
         .center {
           grid-column: 2 / span 2;
           display: flex;
