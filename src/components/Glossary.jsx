@@ -114,8 +114,6 @@ function Glossary(props) {
 
         </div>
 
-<<<<<<< HEAD
-=======
       <div className = 'term'>More Resources</div>
       <div className = 'def'>
         <ul>
@@ -125,7 +123,6 @@ function Glossary(props) {
           <li><a href='https:\/\/lorenstewart.me/2016/11/27/a-practical-guide-to-redux/'  target='_blank'>A Practical Guide to Redux</a></li>
           <li><a href='https:\/\/dev.to/hemanth/explain-redux-like-im-five'  target='_blank'>Explain Redux Like I'm Five</a></li>
         </ul>
->>>>>>> master
       </div>
     );
   }
