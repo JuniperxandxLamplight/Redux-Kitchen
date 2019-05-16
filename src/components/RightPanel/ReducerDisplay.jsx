@@ -45,7 +45,7 @@ class ReducerDisplay extends React.Component {
             cursor: pointer;
           }
           h2{
-            color: #C79A43;
+            color: #8CB490;
           }
           .reducerText{
             text-align: left;
