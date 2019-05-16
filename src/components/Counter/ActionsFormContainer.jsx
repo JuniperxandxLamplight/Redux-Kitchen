@@ -2,13 +2,13 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { nextCustomer, userStateChange, dayToggle } from './../../actions';
 import constants from './../../constants';
-import ActionDayOne from './FormComponents/ActionDayOne';
+import ActionForm from './FormComponents/ActionForm';
 
 const { levels } = constants;
 
 
 
-class ActionsForm extends React.Component{
+class ActionsFormContainer extends React.Component{
   constructor(props){
     super(props);
     this.userLevel = props.userLevel;
@@ -41,14 +41,10 @@ class ActionsForm extends React.Component{
   }
 
   render(){
-    console.log(this.props.dayTime);
-    let form;
-    if (this.props.dayTime) {
-      form = <ActionDayOne onActionSubmission={this.handleActionSubmission}/>
-    } else {
-      form = "";
-    }
-   
+
+      let form = <ActionForm onActionSubmission={this.handleActionSubmission}
+        level={this.props.userLevel} />
+
     return(
       <div>
         {form}
@@ -66,5 +62,5 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(ActionsForm);
+export default connect(mapStateToProps)(ActionsFormContainer);
 

@@ -1,7 +1,9 @@
+
 import React from 'react';
 
-function ActionDayOne(props) {
+function ActionForm(props) {
   let _type = null;
+  let actionForm;
 
   function handleActionSubmission(e){
     e.preventDefault();
@@ -9,6 +11,10 @@ function ActionDayOne(props) {
     props.onActionSubmission(userAnswer);
     _type.value = '';
   }
+
+  if(props.level===1) {
+    actionForm = <p> type :<input type='text' id='type' placeholder="action type" ref={(input) => {_type = input;}}/></p>
+  } else {}
 
   return(
     <div className="container">
@@ -21,10 +27,7 @@ function ActionDayOne(props) {
         </div>
         <form onSubmit={handleActionSubmission}>
           <p>action = {'{'}</p>
-          <p>
-            type :
-            <input type='text' id='type' placeholder="action type" ref={(input) => {_type = input;}}/>
-          </p>
+          {actionForm}
           <p>{'}'}</p>
           <button type="submit">Dispatch</button>
         </form>
@@ -57,4 +60,4 @@ function ActionDayOne(props) {
     );
 }
 
-export default ActionDayOne;
+export default ActionForm;
