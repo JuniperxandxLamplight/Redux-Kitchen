@@ -25,6 +25,11 @@ function InstructionsDisplay(props) {
           padding: 5%;
           text-align: center;
         }
+        h1 {
+          font-family: 'Archivo Black', sans-serif;
+          color: #b26949;
+          text-shadow: 1px 1px #000;
+        }
         h3{
           margin: 5% 0 10% 0;
         }

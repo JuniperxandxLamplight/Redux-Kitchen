@@ -101,6 +101,11 @@ class ReducerDisplay extends React.Component {
           .robotChef{
             width: 25%;
           }
+          h1 {
+            font-family: 'Archivo Black', sans-serif;
+            color: #b26949;
+            text-shadow: 1px 1px #000;
+          }
           img{
             height: auto;
             width: 100%;
