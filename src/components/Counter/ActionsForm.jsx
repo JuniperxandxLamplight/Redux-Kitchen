@@ -3,11 +3,10 @@ import {connect} from 'react-redux';
 import { nextCustomer, userStateChange, dayToggle } from './../../actions';
 import constants from './../../constants';
 
-const { levelData, levels } = constants;
+const { levels } = constants;
 
 
 function ActionsForm(props){
-
   const form = <form onSubmit={handleActionSubmission}>
         <p>action = {'{'}</p>
         <p>&ensp; type : <input type='text' id='type' placeholder='action type' ref={(input) => {_type = input;}}/>
@@ -24,16 +23,16 @@ function ActionsForm(props){
   function handleActionSubmission(e) {
     e.preventDefault();
     // check for correct answer
-    if (_type.value === levelData[userLevel].answersDay[(customer - 1)]){
+    if (_type.value === levels[userLevel].answersDay[(customer - 1)]){
       // check for customer count
       if (customer >= 3) {
         // toggle to night and reset cutomercount to 1
         props.dispatch(dayToggle());
-        props.dispatch(userStateChange(levelData[userLevel].answersDay[(customer - 1)]))
+        props.dispatch(userStateChange(levels[userLevel].answersDay[(customer - 1)]))
       } else {
         // go to the next customer
         props.dispatch(nextCustomer());
-        props.dispatch(userStateChange(levelData[userLevel].answersDay[(customer - 1)]))
+        props.dispatch(userStateChange(levels[userLevel].answersDay[(customer - 1)]))
       }
     } else {
       // Do some animation
@@ -92,7 +91,6 @@ function ActionsForm(props){
 const mapStateToProps = state => {
   return {
     userLevel: state.userLevel,
-    levelData: state.levelData,
     customerCount: state.customerCount,
   }
 }
