@@ -38,7 +38,7 @@ function Glossary(props) {
           width: 25vw;
           height: 80%;
           min-width: 400px;
-          animation: slideDown .5s ease-in;
+          animation: slideDown .35s ease-in;
           overflow: auto;
 
         }

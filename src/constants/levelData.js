@@ -10,7 +10,7 @@
   },
   2: {
     dayInstructions: 'Make sure to pay attention to what the customer is ordering! *> You\'ll have to dispatch a different action for differrent orders.',
-    nightInstructions: 'Your new biscuits area hit! How about you make your robot more efficient, and rake in even more cash! *> A payload is an extra piece of info you send with your action to your reducer. In your case, this will be a quantity value, so your robot can make more than one waffle at a time! To do this, you need to modify your reducer to use this payload. *> Here\'s your reducer. Let\'s put action.quantity where the "1" used to be, so it will use your quantity payload to cook as many waffles as you want!',
+    nightInstructions: 'Your new biscuits are a hit! How about you make your robot more efficient, and rake in even more cash! *> A payload is an extra piece of info you send with your action to your reducer. In your case, this will be a quantity value, so your robot can make more than one waffle at a time! To do this, you need to modify your reducer to use this payload. *> Here\'s your reducer. Let\'s put action.quantity where the "1" used to be, so it will use your quantity payload to cook as many waffles as you want!',
     answersDay: ["COOK_BISCUITS", "COOK_WAFFLES", "COOK_BISCUITS"],
     answersNight: ["action.quantity", "action.quantity"],
     promptDay : ["var action = {", "&ensp;type : <input type='text' id='type' placeholder='action type' ref='input1' />", "}"],

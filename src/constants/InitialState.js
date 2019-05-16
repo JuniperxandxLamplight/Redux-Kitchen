@@ -14,5 +14,6 @@ export const initialState = {
 
   userLevel: 1,
   dayTime: true,
-  customerCount: 1,
+  customerCount: 1
+
 };
