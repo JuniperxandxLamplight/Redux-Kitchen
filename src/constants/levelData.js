@@ -12,16 +12,16 @@
     dayInstructions: 'Make sure to pay attention to what the customer is ordering! *> You\'ll have to dispatch a different action for differrent orders.',
     nightInstructions: 'Your new biscuits area hit! How about you make your robot more efficient, and rake in even more cash! *> A payload is an extra piece of info you send with your action to your reducer. In your case, this will be a quantity value, so your robot can make more than one waffle at a time! To do this, you need to modify your reducer to use this payload. *> Here\'s your reducer. Let\'s put action.quantity where the "1" used to be, so it will use your quantity payload to cook as many waffles as you want!',
     answersDay: ["COOK_BISCUITS", "COOK_WAFFLES", "COOK_BISCUITS"],
-    answersNight: [],
+    answersNight: ["action.quantity", "action.quantity"],
     promptDay : ["var action = {", "&ensp;type : <input type='text' id='type' placeholder='action type' ref='input1' />", "}"],
-    promptNight : ["function waffleStation ( state = initialState, action ) {" , "&ensp;switch ( action.type ) {" , "&ensp;&ensp;case 'COOK_WAFFLE' :" , "&ensp;&ensp;&ensp;return { waffles : waffles +1 };", "&ensp;&ensp;case <input type=text placeholder='action type' ref='input1'></input> :" , "return { <input type=text placeholder='state slice' ref='input2'></input> : <input type=text placeholder='state slice' ref='input3'></input> +1 };", "&ensp;}", "}"]
+    promptNight : ["function waffleStation ( state = initialState, action ) {" , "&ensp;switch ( action.type ) {" , "&ensp;&ensp;case 'COOK_WAFFLES' :" , "&ensp;&ensp;&ensp;return { waffles : waffles + <input type=text placeholder='payload reference' ref='input1'></input> };", "&ensp;&ensp;case 'COOK_BISCUITS' :" , "&ensp;&ensp;&ensp;return { biscuits : biscuits + <input type=text placeholder='payload reference' ref='input2'></input> };", "&ensp;}", "}"]
   },
   3: {
     dayInstructions: '',
     nightInstructions: '',
     answersDay: ["COOK_WAFFLES"],
     answersNight: [],
-    promptDay : ["function waffleStation(state = initialState, action){" , "&ensp;switch(action.type){" , "&ensp;&ensp;case 'COOK_WAFFLE:'" , "&ensp;&ensp;&ensp;return{cookedWaffles:cookedWaffles +1};", "&ensp;&ensp;case <input type=text></input>:" , "return{<input type=text></input> : <input type=text></input> +1};", "&ensp;}", "}"],
+    promptDay : ["var action = {", "&ensp;type : <input type='text' id='type' placeholder='action type' ref='input1' />", "&ensp;quantity : <input type='text' id='type' placeholder='payload' ref='input2' />", "}"],
     promptNight : ["&ensp;&ensp;case 'COOK_WAFFLE:'" , "&ensp;&ensp;&ensp;return{cookedWaffles:cookedWaffles +1};", "&ensp;&ensp;case <input type=text></input>:" , "return{<input type=text></input> : <input type=text></input> +1};", "&ensp;}", "}"]
   }
 }
