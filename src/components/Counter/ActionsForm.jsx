@@ -14,7 +14,7 @@ class ActionsForm extends React.Component {
     console.log("ref", this.refs.input2)
 
     this.refs.input2 ? quantity = parseInt(this.refs.input2.value) : quantity = 1;
-    
+
     console.log("ref", quantity)
 
     if (this.refs.input1.value === levels[this.props.userLevel].answersDay[(this.props.customerCount - 1)]){
@@ -29,7 +29,11 @@ class ActionsForm extends React.Component {
         this.props.dispatch(userStateChange(levels[this.props.userLevel].answersDay[(this.props.customerCount - 1)], quantity))
       }
     } else {
-      console.log("NOOOOOOO!")
+      const box = document.getElementById('box');
+      box.classList.add("shake");
+      setTimeout(function(){
+        box.classList.remove("shake");
+      },  500);
     }
 
     this.refs.input1.value = '';
@@ -37,7 +41,7 @@ class ActionsForm extends React.Component {
 
 render(){
   return(
-      <form
+      <form id="box"
         style={formStyles}
         onSubmit={this.handleActionSubmission.bind(this)}>
         {
@@ -48,6 +52,19 @@ render(){
         <div style={{textAlign: "center"}}>
           <button style={buttonStyles} type='submit'>Dispatch</button>
         </div>
+        <style jsx>{`
+          .shake{
+            animation: wrongAnswer .5s 1;
+          }
+          @keyframes wrongAnswer{
+            0% { transform: translateX(0) };
+            20% { transform: translateX(15px) };
+            40% { transform: translateX(-15px) };
+            60% { transform: translateX(15px) };
+            80% { transform: translateX(-15px) };
+            100% { transform: translateX(0) };
+          }
+        `}</style>
       </form>
   );
 }}
