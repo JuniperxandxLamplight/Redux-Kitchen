@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import constants from './../../constants';
 import ReactHtmlParser from 'react-html-parser';
+import {formStyles, lineStyles, spanStyles, buttonStyles} from './formStyles';
+
 const {levels} = constants;
 
 
@@ -31,16 +33,15 @@ class ReducersForm extends React.Component{
 
   render() {
     return(
-      <div className="reducerForm">
-        <form onSubmit={this.handleReducersSubmit.bind(this)}>
+        <form style={formStyles}
+          onSubmit={this.handleReducersSubmit.bind(this)}>
         {
           levels[this.props.userLevel].promptNight.map(function(lineText, index){
-            return <div key={index}>{ReactHtmlParser(lineText)}</div>
+            return <div key={index} style={lineStyles}><span style={spanStyles}>{index + 1}</span>{ReactHtmlParser(lineText)}</div>
           })
         }
-        <button type='submit'>Update Reducer</button>
+        <button type='submit'style={buttonStyles}>Update Reducer</button>
       </form>
-      </div>
     );
   }
 }
