@@ -65,7 +65,7 @@ function Header(props){
       <div className='right'>
         <div className='links'>
           <div className = 'linkstyle' onClick={props.handleClick}>Glossary</div>
-          <Link to="/game" style={{textDecoration: 'none'}}><div className = 'linkstyle'>Restart</div></Link>
+          <Link to="/" style={{textDecoration: 'none'}}><div className = 'linkstyle'>Restart</div></Link>
 
         </div>
       </div>

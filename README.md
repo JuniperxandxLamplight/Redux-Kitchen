@@ -9,16 +9,16 @@
 #### By _**Aurora Shido-Wagenet, Kim McConnell, Ward Chamberlain, Randee Layosa, Tracy Reith**_
 
 1. [Description](#description)
-1. [Stretch Goals](#stretch-goals)
-1. [Target Audience](#target-audience)
-1. [Component Tree](#component-tree)
-1. [State Shapes](#state-shapes)
+2. [Stretch Goals](#stretch-goals)
+3. [Target Audience](#target-audience)
+4. [Component Tree](#component-tree)
+5. [State Shapes](#state-shapes)
 <!--1. [Development Plan](#development-plan)-->
 <!-- 1. [Development Specs](#development-specs) -->
-1. [Installation](#installation)
+6. [Installation](#setup-and-installation-requirements)
 <!-- 1. [Known Bugs](#known-bugs) -->
-1. [Design and Development Technologies](#design-and-development-technologies)
-1. [License](#license)
+7. [Design and Development Technologies](#design-and-development-technologies)
+8. [License](#license)
 
 ## Description
 
@@ -125,7 +125,7 @@ state = {
 }
 ````
 
-## Setup/Installation Requirements
+## Setup and Installation Requirements
 
 * Use your command terminal (gitbash if you're using a windows machine) to clone the latest commit from Github, using the url provided
 * Open with a text editor such as Atom to view the code
@@ -150,6 +150,6 @@ _If you encounter any bugs or issues not documented during your experience, plea
 
 
 ### License
-[MIT](./LICENSE.txt)
+[MIT](./LICENSE.txt)  
 
 Copyright (c) 2019 Aurora Shido-Wagenet, Kim McConnell, Ward Chamberlain, Randee Layosa, Tracy Reith
