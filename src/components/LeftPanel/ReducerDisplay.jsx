@@ -67,6 +67,11 @@ class ReducerDisplay extends React.Component {
             width: 60%;
             cursor: pointer;
           }
+          h1 {
+            font-family: 'Archivo Black', sans-serif;
+            color: #b26949;
+            text-shadow: 1px 1px #000;
+          }
           .robot-container{
             border: 4px solid #76674B;
             background-color: #FBD961;

@@ -15,6 +15,8 @@ function Header(props){
           display: grid;
           grid-template-columns: repeat(4, 1fr);
         }
+
+
         .center {
           grid-column: 2 / span 2;
           display: flex;
@@ -43,12 +45,13 @@ function Header(props){
         }
         .links {
           place-self: center;
-          display: flex;
+          padding-left: 1rem;
         }
 
         .linkstyle, .linkstyle:visited {
           margin-right: 1rem;
           color: #000;
+          font-size: 1.2rem;
           text-decoration: none;
           display: inline;
           cursor: pointer;
@@ -62,7 +65,8 @@ function Header(props){
       <div className='right'>
         <div className='links'>
           <div className = 'linkstyle' onClick={props.handleClick}>Glossary</div>
-          <Link to="/game" style={{textDecoration: 'none'}}><p>Restart</p></Link>
+          <Link to="/game" style={{textDecoration: 'none'}}><div className = 'linkstyle'>Restart</div></Link>
+
         </div>
       </div>
     </div>

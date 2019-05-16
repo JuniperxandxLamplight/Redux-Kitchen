@@ -15,7 +15,7 @@ function Intro(){
         <p>You have a store that has been created for you by your grandma. This is your kitchen. It holds your inventory.</p>
         <p>In your store, your have a reducer. This is your waffle robot. He can change your inventory. He reads actions you give him to know what to do. </p>
         <p>Lastly, you have actions. These are your order tickets that you give to your reducer. When your reducer receives an action, he will do whatever the action tells him.</p>
-        <Link to="/game"><h2>Next</h2></Link>
+        <Link style={{textDecoration: 'none'}} to="/game"><h2>Next</h2></Link>
       </div>
       <style jsx>{`
         div{
@@ -57,6 +57,12 @@ function Intro(){
         p{
           width: 76%;
           margin-left: 12%;
+        };
+        h2{
+          color: black;
+          border: 2px solid black;
+          padding: 5px;
+          border-radius: 10px;
         }
       `}</style>
     </div>

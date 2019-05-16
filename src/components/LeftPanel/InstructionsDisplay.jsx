@@ -1,5 +1,4 @@
 import React from 'react';
-import ReducerDisplay from './ReducerDisplay';
 import constants from './../../constants';
 import {connect} from 'react-redux';
 
@@ -20,13 +19,16 @@ function InstructionsDisplay(props) {
         return <p key={index}>{paragraph}</p>
       })}
 
-      <ReducerDisplay/>
-
       <style jsx>{`
         .instructions-display{
           margin-top: 15%;
           padding: 5%;
           text-align: center;
+        }
+        h1 {
+          font-family: 'Archivo Black', sans-serif;
+          color: #b26949;
+          text-shadow: 1px 1px #000;
         }
         h3{
           margin: 5% 0 10% 0;

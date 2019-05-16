@@ -25,5 +25,5 @@ export const messageStyles = {
 
   height : '40vh',
   width : '100%',
-  padding : '0px 30px'
+  padding : '0px 50px'
 };
