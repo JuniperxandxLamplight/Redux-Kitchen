@@ -31,7 +31,7 @@ function Header(props){
           flex-flow: row nowrap;
           justify-content: flex-start;
         }
-        h6{
+        p{
           margin-right: 1rem;
           color: #000;
           text-decoration: none;
@@ -43,6 +43,7 @@ function Header(props){
         }
         .links {
           place-self: center;
+          display: flex;
         }
 
         .linkstyle, .linkstyle:visited {
@@ -61,7 +62,7 @@ function Header(props){
       <div className='right'>
         <div className='links'>
           <div className = 'linkstyle' onClick={props.handleClick}>Glossary</div>
-          <Link to="/game" style={{textDecoration: 'none'}}><h6>Restart</h6></Link>
+          <Link to="/game" style={{textDecoration: 'none'}}><p>Restart</p></Link>
         </div>
       </div>
     </div>
