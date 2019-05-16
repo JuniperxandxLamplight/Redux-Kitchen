@@ -1,6 +1,8 @@
 export const formStyles = {
   width: '80%',
   maxHeight: '100%',
+  fontFamily: 'Roboto Mono'
+
 }
 
 export const spanStyles = {
@@ -19,6 +21,11 @@ export const lineStyles = {
 export const buttonStyles = {
   marginTop: "10px",
   padding: "10px",
-  backgroundColor: '#BD0D0D',
+  backgroundColor: '#b23701',
   borderRadius: '4px',
+  color: '#f3f3f3',
+  fontSize: '.9rem',
+  fontFamily: 'Roboto Mono',
+  textTransform: 'uppercase',
+  letterSpacing: '.1rem'
 }
