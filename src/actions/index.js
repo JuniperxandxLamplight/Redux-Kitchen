@@ -15,7 +15,8 @@ export const nextCustomer = () => ({
   type: types.NEXT_CUSTOMER,
 });
 
-export const userStateChange = (userInput) => 
+export const userStateChange = (userInput, userQuantity) => 
 ({
   type: userInput,
+  quantity: userQuantity
 });
