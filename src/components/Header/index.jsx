@@ -5,7 +5,6 @@ import { Route, Link } from 'react-router-dom';
 
 
 function Header(props){
-  console.log(props);
   return(
     <div className='structure'>
       <style jsx>{`
@@ -32,7 +31,11 @@ function Header(props){
           flex-flow: row nowrap;
           justify-content: flex-start;
         }
-
+        p{
+          margin-right: 1rem;
+          color: #000;
+          text-decoration: none;
+        }
         a, a:visited {
           margin-right: 1rem;
           color: #000;
@@ -40,6 +43,7 @@ function Header(props){
         }
         .links {
           place-self: center;
+          display: flex;
         }
 
         .linkstyle, .linkstyle:visited {
@@ -57,19 +61,11 @@ function Header(props){
       </div>
       <div className='right'>
         <div className='links'>
-          <a href="#">Glossary</a>
-          <Link to="/game">Restart</Link>
-        </div>
-        <div className='right'>
-          <div className='links'>
-            <div className = 'linkstyle' onClick={props.handleClick}>Glossary</div>
-            <Link to="/game"><div className = 'linkstyle'>Restart</div></Link>
-          </div>
+          <div className = 'linkstyle' onClick={props.handleClick}>Glossary</div>
+          <Link to="/game" style={{textDecoration: 'none'}}><p>Restart</p></Link>
         </div>
       </div>
-    </div>  
-
-
+    </div>
   );
 }
 

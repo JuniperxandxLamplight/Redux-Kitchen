@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import { nextCustomer, userStateChange, dayToggle } from './../../actions';
 import constants from './../../constants';
 const {levels} = constants;
@@ -29,7 +30,7 @@ class ActionsForm extends React.Component {
         this.props.dispatch(dayToggle());
         this.props.dispatch(userStateChange(levels[this.userLevel].answersDay[(this.customer - 1)]))
       } else {
-        // go to the next this.customer
+        // go to the next customer
         this.props.dispatch(nextCustomer());
         this.props.dispatch(userStateChange(levels[this.userLevel].answersDay[(this.customer - 1)]))
       }
@@ -56,6 +57,7 @@ render(){
     </div>
   );
 }}
+
 
 const mapStateToProps = state => {
   return {
