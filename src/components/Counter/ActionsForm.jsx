@@ -10,33 +10,32 @@ const { levels } = constants;
 class ActionsForm extends React.Component{
   constructor(props){
     super(props);
-    const userLevel = props.userLevel;
-    const customer = props.customerCount;
-    let _type = null;
+    this.userLevel = props.userLevel;
+    this.customer = props.customerCount;
     this.handleActionSubmission = this.handleActionSubmission.bind(this);
+    
   }
   
 
 
-  handleActionSubmission(e) {
-    e.preventDefault();
+  handleActionSubmission(userAnswer) {
+    
     // check for correct answer
-    if (_type.value === levels[userLevel].answersDay[(customer - 1)]){
+    if (userAnswer === levels[this.userLevel].answersDay[(this.customer - 1)]){
       // check for customer count
-      if (customer >= 3) {
+      if (this.customer >= 3) {
         // toggle to night and reset cutomercount to 1
-        props.dispatch(dayToggle());
-        props.dispatch(userStateChange(levels[userLevel].answersDay[(customer - 1)]))
+        this.props.dispatch(dayToggle());
+        this.props.dispatch(userStateChange(levels[this.userLevel].answersDay[(this.customer - 1)]))
       } else {
         // go to the next customer
-        props.dispatch(nextCustomer());
-        props.dispatch(userStateChange(levels[userLevel].answersDay[(customer - 1)]))
+        this.props.dispatch(nextCustomer());
+        this.props.dispatch(userStateChange(levels[this.userLevel].answersDay[(this.customer - 1)]))
       }
     } else {
       // Do some animation
       console.log("NOOOOOOO!")
     }
-    _type.value = '';
   }
 
   render(){
@@ -89,6 +88,7 @@ class ActionsForm extends React.Component{
     );
   }
 }
+
 
 const mapStateToProps = state => {
   return {

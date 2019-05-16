@@ -2,6 +2,14 @@ import React from 'react';
 
 function ActionDayOne(props) {
   let _type = null;
+
+  function handleActionSubmission(e){
+    e.preventDefault();
+    let userAnswer = _type.value;
+    props.onActionSubmission(userAnswer);
+    _type.value = '';
+  }
+
   return(
     <div className="container">
         <div className='numbersBox'>
@@ -11,7 +19,7 @@ function ActionDayOne(props) {
           <p>4</p>
           <p>5</p>
         </div>
-        <form onSubmit={props.onActionSubmission}>
+        <form onSubmit={handleActionSubmission}>
           <p>action = {'{'}</p>
           <p>
             type :
