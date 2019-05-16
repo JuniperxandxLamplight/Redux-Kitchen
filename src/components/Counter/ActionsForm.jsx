@@ -4,35 +4,29 @@ import constants from './../../constants';
 const {levels} = constants;
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import Line from './Line';
 import ReactHtmlParser from 'react-html-parser';
 
 class ActionsForm extends React.Component {
   handleActionSubmission(e) {
     e.preventDefault();
-    console.log("here");
-    // check for correct answer
     console.log(this.refs);
     console.log(this.props.customerCount)
 
     if (this.refs.input1.value === levels[this.props.userLevel].answersDay[(this.props.customerCount - 1)]){
-      // check for this.props.customer count
       if (this.props.customerCount >= 3) {
-        // toggle to night and reset cutomercount to 1
         this.props.dispatch(dayToggle());
         this.props.dispatch(userStateChange(levels[this.props.userLevel].answersDay[(this.props.customerCount - 1)]))
       } else {
-        // go to the next customer
         this.props.dispatch(nextCustomer());
         this.props.dispatch(userStateChange(levels[this.props.userLevel].answersDay[(this.props.customerCount - 1)]))
       }
     } else {
-      // Do some animation
       console.log("NOOOOOOO!")
     }
 
     this.refs.input1.value = '';
   }
+
 render(){
   return(
     <div className="container">

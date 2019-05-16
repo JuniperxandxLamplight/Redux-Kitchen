@@ -3,28 +3,37 @@ import { dayToggle } from '../../actions';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import constants from './../../constants';
-import Line from './Line';
+import ReactHtmlParser from 'react-html-parser';
+
 
 const {levels} = constants;
 
 
-function ReducersForm(props){
-  function handleReducersSubmit(e) {
+class ReducersForm extends React.Component{
+  handleReducersSubmit(e) {
     e.preventDefault();
-    if (_type.value === levelData[userLevel].answersNight[0] && _input1.value === levelData[userLevel].answersNight[1] && _input2.value === levelData[userLevel].answersNight[2]){
-      props.dispatch(dayToggle());
-    } else {}
+    if (this.refs.input1.value === levels[this.props.userLevel].answersNight[0] && this.refs.input2.value === levels[this.props.userLevel].answersNight[1] && this.refs.input3.value === levels[this.props.userLevel].answersNight[2]){
+      this.props.dispatch(dayToggle());
+    } else {
+      console.log("nope")
+    }
   }
-  
-  return(
-    <div className="reducerForm">
-      {
-        levels[props.level].promptNight.map(function(lineText, index) {
-          return <Line text={lineText} key={index}/>
-        })
-      }
-    </div>
-  );
+
+
+  render() {
+    return(
+      <div className="reducerForm">
+        <form onSubmit={this.handleReducersSubmit.bind(this)}>
+        {
+          levels[this.props.userLevel].promptNight.map(function(lineText, index){
+            return <div key={index}>{ReactHtmlParser(lineText)}</div>
+          })
+        }
+        <button type='submit'>Update Reducer</button>
+      </form>
+      </div>
+    );
+  }
 }
 
 ReducersForm.propTypes = {
@@ -32,7 +41,8 @@ ReducersForm.propTypes = {
 }
 
 const mapStateToProps = (state) => ({
-  level : state.userLevel
+  userLevel: state.userLevel,
+  customerCount: state.customerCount,
 });
 
 export default connect(mapStateToProps)(ReducersForm);

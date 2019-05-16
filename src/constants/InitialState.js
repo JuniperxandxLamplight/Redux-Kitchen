@@ -13,7 +13,7 @@ export const initialState = {
   },
 
   userLevel: 1,
-  dayTime: true,
+  dayTime: false,
   customerCount: 1,
 
 };
