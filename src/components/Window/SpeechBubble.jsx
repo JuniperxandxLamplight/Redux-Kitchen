@@ -10,15 +10,15 @@ function SpeechBubble(props){
     waffleNumber = Math.floor(Math.random()*4);
   }
 
-  let items = ['waffle', 'biscuit'];
+  let items = ['biscuit', 'waffle', 'biscuit'];
   let item;
   if (props.state.userLevel < 2){
     item = 'waffle';
   } else {
-    item = items[Math.floor(Math.random()*2)];
+    item = items[props.state.customerCount - 1];
   }
 
-  return(
+  return (
     <div>
       <p>{waffleNumber} {item} please!</p>
       <style jsx>{`
