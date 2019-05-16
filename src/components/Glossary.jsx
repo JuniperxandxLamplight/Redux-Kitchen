@@ -40,6 +40,17 @@ function Glossary(props) {
           min-width: 400px;
           animation: slideDown .5s ease-in;
           overflow: auto;
+
+        }
+
+        ::-webkit-scrollbar{
+          width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #C79A43;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #B6765A;
         }
 
         .glossaryHidden {
@@ -48,11 +59,11 @@ function Glossary(props) {
 
          @keyframes slideDown{
          0% {height: 0}
-         100% {height: 80%}
+         100% {height: 60%}
        }
 
          @keyframes slideUp{
-         0% {height: 80%}
+         0% {height: 60%}
          100% {height: 0}
        }
 
@@ -66,7 +77,6 @@ function Glossary(props) {
           margin-bottom: .25rem;
           padding-bottom: .25rem
           height: 100%;
-          overflow-y: auto;
           animation: slideDown .5s ease-in;
         }
 
