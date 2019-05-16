@@ -13,10 +13,7 @@
 1. [Target Audience](#target-audience)
 1. [Component Tree](#component-tree)
 1. [State Shapes](#state-shapes)
-<!--1. [Development Plan](#development-plan)-->
-<!-- 1. [Development Specs](#development-specs) -->
 1. [Installation](#installation)
-<!-- 1. [Known Bugs](#known-bugs) -->
 1. [Design and Development Technologies](#design-and-development-technologies)
 1. [License](#license)
 
