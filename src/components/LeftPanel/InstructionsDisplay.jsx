@@ -7,7 +7,7 @@ function InstructionsDisplay(props) {
 
   let instructions;
   if (props.state.dayTime){
-    instructions = constants.levelData[props.state.userLevel].dayInstructions.split("*>");
+    instructions = constants.levels[props.state.userLevel].dayInstructions.split("*>");
   } else {
     instructions = [''];
   }
@@ -16,8 +16,8 @@ function InstructionsDisplay(props) {
     <div className='instructions-display'>
       <h1>INSTRUCTIONS</h1>
       <h3>Day {props.state.userLevel}</h3>
-      {instructions.map((paragraph) => {
-        return <p>{paragraph}</p>
+      {instructions.map((paragraph, index) => {
+        return <p key={index}>{paragraph}</p>
       })}
 
       <ReducerDisplay/>
